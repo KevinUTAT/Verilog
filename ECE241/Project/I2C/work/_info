@@ -1,0 +1,68 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Dev/FPGA/Project/I2C
+vhex_decoder
+Z1 !s110 1479482447
+!i10b 1
+!s100 3RgE<c<5[Sl4X4XHN1z<O1
+IPSkBZhjWegc]@diO19VLU1
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z3 w1479431387
+Z4 8I2C.v
+Z5 FI2C.v
+L0 117
+Z6 OV;L;10.4d;61
+r1
+!s85 0
+31
+Z7 !s108 1479482446.000000
+Z8 !s107 i2c_master.v|I2C.v|
+Z9 !s90 -reportprogress|300|I2C.v|
+!i113 1
+vI2C
+R1
+!i10b 1
+!s100 Q?C5SB?ePc@KUAz<JDdIE2
+Iif8Zf90AT3ZPd44Bnc]An2
+R2
+R0
+R3
+R4
+R5
+L0 4
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+n@i2@c
+vi2c_master
+R1
+!i10b 1
+!s100 LAH<6PZl`A>PzZJFG>V5U2
+IdOE1^o[m6ecUTJQ0NORd71
+R2
+R0
+w1473699028
+8i2c_master.v
+Fi2c_master.v
+L0 32
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1

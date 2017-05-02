@@ -1,0 +1,7 @@
+
+State Machine - |Lab7p3|controlPath3:control|current
+Name current.update current.Black current.draw current.reset 
+current.reset 0 0 0 0 
+current.draw 0 0 1 1 
+current.Black 0 1 0 1 
+current.update 1 0 0 1 

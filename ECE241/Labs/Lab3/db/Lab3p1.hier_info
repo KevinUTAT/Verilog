@@ -1,0 +1,38 @@
+|Lab3p1
+SW[0] => SW[0].IN1
+SW[1] => SW[1].IN1
+SW[2] => SW[2].IN1
+SW[3] => SW[3].IN1
+SW[4] => SW[4].IN1
+SW[5] => SW[5].IN1
+SW[6] => SW[6].IN1
+SW[7] => SW[7].IN1
+SW[8] => SW[8].IN1
+SW[9] => SW[9].IN1
+LEDR[0] << mux7to1:mux1.outp
+LEDR[1] << <GND>
+LEDR[2] << <GND>
+LEDR[3] << <GND>
+LEDR[4] << <GND>
+LEDR[5] << <GND>
+LEDR[6] << <GND>
+LEDR[7] << <GND>
+LEDR[8] << <GND>
+LEDR[9] << <GND>
+
+
+|Lab3p1|mux7to1:mux1
+inp[0] => Mux0.IN6
+inp[0] => Mux0.IN7
+inp[1] => Mux0.IN5
+inp[2] => Mux0.IN4
+inp[3] => Mux0.IN3
+inp[4] => Mux0.IN2
+inp[5] => Mux0.IN1
+inp[6] => Mux0.IN0
+select[0] => Mux0.IN10
+select[1] => Mux0.IN9
+select[2] => Mux0.IN8
+outp <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+

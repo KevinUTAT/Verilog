@@ -1,0 +1,13 @@
+
+module PWM(
+	input CLOCK_50,
+	output GPIO0[39:0],
+	);
+	
+	reg [3:0] count;
+	
+	always@(posedge CLOCK_50) count <= count + 1'b1;
+	
+	assign GPIO0[33] = (4'd3 > count);
+	
+endmodule 

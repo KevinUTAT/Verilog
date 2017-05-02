@@ -1,0 +1,229 @@
+|Lab5p1
+SW[0] => SW[0].IN1
+SW[1] => SW[1].IN1
+KEY[0] => KEY[0].IN1
+KEY[1] => ~NO_FANOUT~
+HEX0[0] <= bithex:bh0.port4
+HEX0[1] <= bithex:bh0.port5
+HEX0[2] <= bithex:bh0.port6
+HEX0[3] <= bithex:bh0.port7
+HEX0[4] <= bithex:bh0.port8
+HEX0[5] <= bithex:bh0.port9
+HEX0[6] <= bithex:bh0.port10
+HEX1[0] <= bithex:bh1.port4
+HEX1[1] <= bithex:bh1.port5
+HEX1[2] <= bithex:bh1.port6
+HEX1[3] <= bithex:bh1.port7
+HEX1[4] <= bithex:bh1.port8
+HEX1[5] <= bithex:bh1.port9
+HEX1[6] <= bithex:bh1.port10
+
+
+|Lab5p1|counter4b:counter0
+enable => enable.IN1
+clock => clock.IN8
+clear_b => clear_b.IN8
+Q[0] <= TFlipflop:TFF0.port1
+Q[1] <= TFlipflop:TFF1.port1
+Q[2] <= TFlipflop:TFF2.port1
+Q[3] <= TFlipflop:TFF3.port1
+Q[4] <= TFlipflop:TFF4.port1
+Q[5] <= TFlipflop:TFF5.port1
+Q[6] <= TFlipflop:TFF6.port1
+Q[7] <= TFlipflop:TFF7.port1
+
+
+|Lab5p1|counter4b:counter0|TFlipflop:TFF0
+T => D.OUTPUTSELECT
+Q <= DFlipflop:DFF0.port3
+clock => clock.IN1
+clear => clear.IN1
+
+
+|Lab5p1|counter4b:counter0|TFlipflop:TFF0|DFlipflop:DFF0
+D => q.DATAIN
+clock => q.CLK
+reset => q.ACLR
+Q <= q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab5p1|counter4b:counter0|TFlipflop:TFF1
+T => D.OUTPUTSELECT
+Q <= DFlipflop:DFF0.port3
+clock => clock.IN1
+clear => clear.IN1
+
+
+|Lab5p1|counter4b:counter0|TFlipflop:TFF1|DFlipflop:DFF0
+D => q.DATAIN
+clock => q.CLK
+reset => q.ACLR
+Q <= q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab5p1|counter4b:counter0|TFlipflop:TFF2
+T => D.OUTPUTSELECT
+Q <= DFlipflop:DFF0.port3
+clock => clock.IN1
+clear => clear.IN1
+
+
+|Lab5p1|counter4b:counter0|TFlipflop:TFF2|DFlipflop:DFF0
+D => q.DATAIN
+clock => q.CLK
+reset => q.ACLR
+Q <= q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab5p1|counter4b:counter0|TFlipflop:TFF3
+T => D.OUTPUTSELECT
+Q <= DFlipflop:DFF0.port3
+clock => clock.IN1
+clear => clear.IN1
+
+
+|Lab5p1|counter4b:counter0|TFlipflop:TFF3|DFlipflop:DFF0
+D => q.DATAIN
+clock => q.CLK
+reset => q.ACLR
+Q <= q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab5p1|counter4b:counter0|TFlipflop:TFF4
+T => D.OUTPUTSELECT
+Q <= DFlipflop:DFF0.port3
+clock => clock.IN1
+clear => clear.IN1
+
+
+|Lab5p1|counter4b:counter0|TFlipflop:TFF4|DFlipflop:DFF0
+D => q.DATAIN
+clock => q.CLK
+reset => q.ACLR
+Q <= q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab5p1|counter4b:counter0|TFlipflop:TFF5
+T => D.OUTPUTSELECT
+Q <= DFlipflop:DFF0.port3
+clock => clock.IN1
+clear => clear.IN1
+
+
+|Lab5p1|counter4b:counter0|TFlipflop:TFF5|DFlipflop:DFF0
+D => q.DATAIN
+clock => q.CLK
+reset => q.ACLR
+Q <= q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab5p1|counter4b:counter0|TFlipflop:TFF6
+T => D.OUTPUTSELECT
+Q <= DFlipflop:DFF0.port3
+clock => clock.IN1
+clear => clear.IN1
+
+
+|Lab5p1|counter4b:counter0|TFlipflop:TFF6|DFlipflop:DFF0
+D => q.DATAIN
+clock => q.CLK
+reset => q.ACLR
+Q <= q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab5p1|counter4b:counter0|TFlipflop:TFF7
+T => D.OUTPUTSELECT
+Q <= DFlipflop:DFF0.port3
+clock => clock.IN1
+clear => clear.IN1
+
+
+|Lab5p1|counter4b:counter0|TFlipflop:TFF7|DFlipflop:DFF0
+D => q.DATAIN
+clock => q.CLK
+reset => q.ACLR
+Q <= q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab5p1|bithex:bh0
+c3 => h0.IN0
+c3 => h0.IN0
+c3 => h0.IN0
+c3 => h0.IN0
+c2 => h0.IN1
+c2 => h0.IN1
+c2 => h0.IN1
+c2 => h0.IN1
+c1 => h0.IN1
+c1 => h1.IN1
+c1 => h1.IN1
+c1 => h2.IN1
+c1 => h0.IN1
+c1 => h0.IN1
+c1 => h0.IN1
+c1 => h3.IN1
+c0 => h0.IN1
+c0 => h0.IN1
+c0 => h0.IN1
+c0 => h1.IN1
+c0 => h1.IN1
+c0 => h3.IN1
+c0 => h3.IN1
+c0 => h4.IN1
+c0 => h0.IN1
+c0 => h1.IN1
+c0 => h1.IN1
+c0 => h1.IN1
+c0 => h2.IN1
+c0 => h3.IN1
+c0 => h6.IN1
+h0 <= h0.DB_MAX_OUTPUT_PORT_TYPE
+h1 <= h1.DB_MAX_OUTPUT_PORT_TYPE
+h2 <= h2.DB_MAX_OUTPUT_PORT_TYPE
+h3 <= h3.DB_MAX_OUTPUT_PORT_TYPE
+h4 <= h4.DB_MAX_OUTPUT_PORT_TYPE
+h5 <= h5.DB_MAX_OUTPUT_PORT_TYPE
+h6 <= h6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab5p1|bithex:bh1
+c3 => h0.IN0
+c3 => h0.IN0
+c3 => h0.IN0
+c3 => h0.IN0
+c2 => h0.IN1
+c2 => h0.IN1
+c2 => h0.IN1
+c2 => h0.IN1
+c1 => h0.IN1
+c1 => h1.IN1
+c1 => h1.IN1
+c1 => h2.IN1
+c1 => h0.IN1
+c1 => h0.IN1
+c1 => h0.IN1
+c1 => h3.IN1
+c0 => h0.IN1
+c0 => h0.IN1
+c0 => h0.IN1
+c0 => h1.IN1
+c0 => h1.IN1
+c0 => h3.IN1
+c0 => h3.IN1
+c0 => h4.IN1
+c0 => h0.IN1
+c0 => h1.IN1
+c0 => h1.IN1
+c0 => h1.IN1
+c0 => h2.IN1
+c0 => h3.IN1
+c0 => h6.IN1
+h0 <= h0.DB_MAX_OUTPUT_PORT_TYPE
+h1 <= h1.DB_MAX_OUTPUT_PORT_TYPE
+h2 <= h2.DB_MAX_OUTPUT_PORT_TYPE
+h3 <= h3.DB_MAX_OUTPUT_PORT_TYPE
+h4 <= h4.DB_MAX_OUTPUT_PORT_TYPE
+h5 <= h5.DB_MAX_OUTPUT_PORT_TYPE
+h6 <= h6.DB_MAX_OUTPUT_PORT_TYPE
+
+

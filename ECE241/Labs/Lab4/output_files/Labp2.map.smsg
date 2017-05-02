@@ -1,0 +1,1 @@
+Warning (10268): Verilog HDL information at Labp2.v(64): always construct contains both blocking and non-blocking assignments File: C:/Dev/FPGA/Project/Lab4/Labp2.v Line: 64

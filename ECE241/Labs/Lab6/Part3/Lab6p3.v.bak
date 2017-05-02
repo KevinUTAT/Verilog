@@ -1,0 +1,198 @@
+`timescale 1ns / 1ns 
+
+
+
+module Lab6p3(SW, KEY, CLOCK_50, LEDR, HEX0, HEX1, HEX2, HEX3, HEX4, HEX5);
+	input [9:0] SW;
+	input [3:0] KEY;
+	input CLOCK_50;
+	output [9:0] LEDR;
+	output [6:0] HEX0;
+	output [6:0] HEX1;
+	output [6:0] HEX2;
+	output [6:0] HEX3;
+	output [6:0] HEX4;
+	output [6:0] HEX5;
+	
+	assign HEX1 = 7'd0;
+	assign HEX3 = 7'd0;
+	assign LEDR[3:0] = answer;
+	
+	wire [3:0] answer;
+	wire [5:0] controlSig;
+	wire [4:0] remainder;
+	
+	dividerControl control(KEY[1], KEY[0], answer, remainder, controlSig, CLOCK_50);
+	
+	dividerDataPath data(SW[3:0], SW[7:4], controlSig, KEY[0], CLOCK_50, remainder, answer);
+	
+	
+	hex_decoder hex0(SW[7:4], HEX0);
+	hex_decoder hex2(SW[3:0], HEX2);
+	hex_decoder hex4(answer, HEX4);
+	hex_decoder hex5(remainder, HEX2);
+	
+endmodule
+
+
+
+module dividerControl(Go, resetn, out, A, controlSig, clk);
+	input Go;
+	input resetn;
+	input clk;
+	input [4:0] A;
+	output [3:0] out;
+	output reg [5:0] controlSig;
+	
+	reg [3:0] current;
+	reg [3:0] next;
+	reg [4:0] a;
+	
+	initial a = A;
+	
+	localparam LOAD    = 4'd0,
+	           WAIT    = 4'd1,
+               SHIFT   = 4'd2,
+			   SUB     = 4'd3,
+			   ADD     = 4'd4,
+			   GOOD    = 4'd5,
+			   BAD     = 4'd6;
+	
+	//state table
+	always@(*)
+	begin: state_table
+			case(current)
+				LOAD: next = Go ? WAIT : LOAD;
+				
+				WAIT: next = Go ? WAIT : SHIFT;
+				
+				SHIFT: next = SUB;
+				
+				SUB: next = a[4] ? ADD : GOOD;
+				
+				ADD: next = BAD;
+				
+				GOOD: next = LOAD;
+				
+				BAD: next = LOAD;
+				
+				default next = LOAD;
+			endcase
+	end
+	
+	
+	always@(*)
+	begin
+			controlSig = 6'b000000;
+			case (current)
+				LOAD: controlSig[0] = 1'b1;
+				
+				SHIFT: controlSig[1] = 1'b1;
+				
+				SUB: controlSig[2] = 1'b1;
+				
+				ADD: controlSig[3] = 1'b1;
+				
+				GOOD: controlSig[4] = 1'b1;
+				
+				BAD: controlSig[5] = 1'b1;
+				
+				default controlSig = 6'b000000;
+			endcase
+	end
+	
+	
+	always@(posedge clk)
+	begin
+			if (!resetn)
+				current <= LOAD;
+			else
+				current <= next;
+	end
+endmodule
+
+
+
+module dividerDataPath(dividend, divisor, controlSig, resetn, clk, A, out);
+	input [3:0] dividend;
+	input [3:0] divisor;
+	input [5:0] controlSig;
+	input resetn;
+	input clk;
+	output reg [3:0] out;
+	output reg [4:0] A;
+	
+	
+	assign A = 5'b00000;
+	
+	reg [3:0] top; //load with dividend
+	reg [4:0] bottom; //load with divisor
+	
+	
+	always@(posedge clk)
+	begin 
+			if (controlSig[0]) //load
+				top = dividend;
+				bottom = divisor;
+			if (controlSig[1]) //shift
+				A = A << 1;
+				A[0] = top[3];
+				top = top << 1;
+			if (controlSig[2]) //sub
+				A = A - bottom;
+			if (controlSig[3]) //add
+				A = A + bottom;
+			if (controlSig[4]) //good
+				top[0] = 1'b1;
+			if (controlSig[5]) //bad
+				top[0] = 1'b0;
+			if (!resetn)
+				out = 4'b0000;
+	end
+	
+	initial out = top;
+endmodule
+				
+				
+	
+module hex_decoder(hex_digit, segments);
+    input [3:0] hex_digit;
+    output reg [6:0] segments;
+   
+    always @(*)
+        case (hex_digit)
+            4'h0: segments = 7'b100_0000;
+            4'h1: segments = 7'b111_1001;
+            4'h2: segments = 7'b010_0100;
+            4'h3: segments = 7'b011_0000;
+            4'h4: segments = 7'b001_1001;
+            4'h5: segments = 7'b001_0010;
+            4'h6: segments = 7'b000_0010;
+            4'h7: segments = 7'b111_1000;
+            4'h8: segments = 7'b000_0000;
+            4'h9: segments = 7'b001_1000;
+            4'hA: segments = 7'b000_1000;
+            4'hB: segments = 7'b000_0011;
+            4'hC: segments = 7'b100_0110;
+            4'hD: segments = 7'b010_0001;
+            4'hE: segments = 7'b000_0110;
+            4'hF: segments = 7'b000_1110;   
+            default: segments = 7'h7f;
+        endcase
+endmodule
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				

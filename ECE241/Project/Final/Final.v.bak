@@ -1,0 +1,64 @@
+`include "servoOut.v"
+`include "PWM_trans.v"
+
+
+/*
+	HEX0&1 default angle - will eventually be set by KEY
+	HEX2&3 current angle - angle the IMU is sensing
+	HEX4&5 update  angle - angle the motor needs to turn
+
+*/
+module Final(
+	input CLOCK_50,
+	input [3:0] KEY,
+	input [31:30] GPIO_0,
+	output [35:34] GPIO_0
+	);
+	
+	wire [15:0] out;
+	
+	PWM_trans trans(
+				.clk(CLOCK_50),
+				.resetn(key[0]),
+				.PWM(GPIO_0[31:30]),
+				.out(out));
+					
+	servoOut out(
+				.clk(CLOCK_50),
+				.din(out),
+				.resetn(KEY[0]),
+				.sevout(GPIO_0[35:34]);
+				
+	endmodule
+				
+	
+
+module hex_decoder(hex_digit, segments);
+    input [3:0] hex_digit;
+    output reg [6:0] segments;
+   
+    always @(*)
+        case (hex_digit)
+            4'h0: segments = 7'b100_0000;
+            4'h1: segments = 7'b111_1001;
+            4'h2: segments = 7'b010_0100;
+            4'h3: segments = 7'b011_0000;
+            4'h4: segments = 7'b001_1001;
+            4'h5: segments = 7'b001_0010;
+            4'h6: segments = 7'b000_0010;
+            4'h7: segments = 7'b111_1000;
+            4'h8: segments = 7'b000_0000;
+            4'h9: segments = 7'b001_1000;
+            4'hA: segments = 7'b000_1000;
+            4'hB: segments = 7'b000_0011;
+            4'hC: segments = 7'b100_0110;
+            4'hD: segments = 7'b010_0001;
+            4'hE: segments = 7'b000_0110;
+            4'hF: segments = 7'b000_1110;   
+            default: segments = 7'h7f;
+        endcase
+endmodule
+					 
+	
+
+					  

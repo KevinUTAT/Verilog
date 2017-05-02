@@ -1,0 +1,4 @@
+Info (10281): Verilog HDL Declaration information at Final.v(17): object "HEX0" differs only in case from object "hex0" in the same scope File: C:/Dev/FPGA/Project/Final/Final.v Line: 17
+Info (10281): Verilog HDL Declaration information at Final.v(18): object "HEX1" differs only in case from object "hex1" in the same scope File: C:/Dev/FPGA/Project/Final/Final.v Line: 18
+Info (10281): Verilog HDL Declaration information at Final.v(19): object "HEX4" differs only in case from object "hex4" in the same scope File: C:/Dev/FPGA/Project/Final/Final.v Line: 19
+Info (10281): Verilog HDL Declaration information at Final.v(21): object "HEX5" differs only in case from object "hex5" in the same scope File: C:/Dev/FPGA/Project/Final/Final.v Line: 21

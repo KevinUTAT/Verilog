@@ -1,0 +1,166 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Dev/FPGA/Project/Lab6/Part3
+valuAddSub
+Z1 !s110 1477877059
+!i10b 1
+!s100 2AaY9Nh`3A8_9ZmK=[lT90
+I4WRnnRJeN7K0S4bTV18GD1
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z3 w1477822517
+Z4 8Lab6p3.v
+Z5 FLab6p3.v
+L0 277
+Z6 OV;L;10.4d;61
+r1
+!s85 0
+31
+Z7 !s108 1477877058.000000
+Z8 !s107 Lab6p3.v|
+Z9 !s90 -reportprogress|300|Lab6p3.v|
+!i113 1
+nalu@add@sub
+vdata_path
+R1
+!i10b 1
+!s100 VKS8gb=DlRl39Vj87GV[L1
+ISQRBLbM_7FD:L3?A8=Ioo1
+R2
+R0
+R3
+R4
+R5
+L0 212
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+vdividerControl
+R1
+!i10b 1
+!s100 kMLl0nC?eB4<F<N?U6TOL3
+INOPE57K7NYl;MJU@?aDa@2
+R2
+R0
+R3
+R4
+R5
+L0 46
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+ndivider@control
+vdivisor
+R1
+!i10b 1
+!s100 nLd<^_MjTBN`19iJ1OJJW2
+IS>3e>EPzYS:oW3BBOSe>30
+R2
+R0
+R3
+R4
+R5
+L0 293
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+vhex_decoder
+R1
+!i10b 1
+!s100 ]Xg_XZ1`C5jXFD[[ME<G60
+IEV:g9VbKKbLUU;z>1iaW91
+R2
+R0
+R3
+R4
+R5
+L0 311
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+vLab6p3
+R1
+!i10b 1
+!s100 Y1dkU7MEH8eo^dn>:04ea0
+IELHC;a5nG3ULF^mCAYYTA1
+R2
+R0
+R3
+R4
+R5
+L0 5
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+n@lab6p3
+vShift_reg
+R1
+!i10b 1
+!s100 hV2SHg_NP:KHbh4j_MjFQ0
+I`b?bhS`]VAUJH6Bh89BQW3
+R2
+R0
+R3
+R4
+R5
+L0 245
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+n@shift_reg
+vterminator
+R1
+!i10b 1
+!s100 Ok@DPYQ57?SoeKA22c0MV3
+IBa2fj6dY@L;=NT77JQV:31
+R2
+R0
+R3
+R4
+R5
+L0 190
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1

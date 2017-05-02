@@ -1,0 +1,8 @@
+`timescale 1ns / 1ns 
+
+module Lab3p2(SW, LEDR)
+
+
+
+
+module fullAdder(

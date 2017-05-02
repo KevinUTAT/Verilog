@@ -1,0 +1,9 @@
+
+State Machine - |Lab7p2|controlPath:control|current
+Name current.draw current.waity current.loady current.waitx current.loadx current.reset 
+current.reset 0 0 0 0 0 0 
+current.loadx 0 0 0 0 1 1 
+current.waitx 0 0 0 1 0 1 
+current.loady 0 0 1 0 0 1 
+current.waity 0 1 0 0 0 1 
+current.draw 1 0 0 0 0 1 

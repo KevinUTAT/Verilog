@@ -1,0 +1,245 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1100mV 85C Model Setup 'servoOut:outa|servos:sev|servoControl:sevY|current[0]'
+Slack : -22.468
+TNS   : -390.481
+
+Type  : Slow 1100mV 85C Model Setup 'servoOut:outa|servos:sev|servoControl:sevP|current[0]'
+Slack : -21.943
+TNS   : -386.966
+
+Type  : Slow 1100mV 85C Model Setup 'CLOCK_50'
+Slack : -5.422
+TNS   : -321.178
+
+Type  : Slow 1100mV 85C Model Setup 'PWM_trans:trans|PWMRead:readY|current.outing'
+Slack : -4.659
+TNS   : -68.427
+
+Type  : Slow 1100mV 85C Model Setup 'PWM_trans:trans|PWMRead:readP|current.outing'
+Slack : -4.524
+TNS   : -67.579
+
+Type  : Slow 1100mV 85C Model Hold 'CLOCK_50'
+Slack : 0.378
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'servoOut:outa|servos:sev|servoControl:sevP|current[0]'
+Slack : 0.946
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'servoOut:outa|servos:sev|servoControl:sevY|current[0]'
+Slack : 1.404
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'PWM_trans:trans|PWMRead:readP|current.outing'
+Slack : 2.590
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'PWM_trans:trans|PWMRead:readY|current.outing'
+Slack : 2.827
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -0.394
+TNS   : -46.680
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'servoOut:outa|servos:sev|servoControl:sevP|current[0]'
+Slack : 0.135
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'servoOut:outa|servos:sev|servoControl:sevY|current[0]'
+Slack : 0.251
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'PWM_trans:trans|PWMRead:readY|current.outing'
+Slack : 0.282
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'PWM_trans:trans|PWMRead:readP|current.outing'
+Slack : 0.307
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Setup 'servoOut:outa|servos:sev|servoControl:sevY|current[0]'
+Slack : -23.381
+TNS   : -407.246
+
+Type  : Slow 1100mV 0C Model Setup 'servoOut:outa|servos:sev|servoControl:sevP|current[0]'
+Slack : -23.042
+TNS   : -405.864
+
+Type  : Slow 1100mV 0C Model Setup 'CLOCK_50'
+Slack : -5.193
+TNS   : -301.786
+
+Type  : Slow 1100mV 0C Model Setup 'PWM_trans:trans|PWMRead:readY|current.outing'
+Slack : -4.731
+TNS   : -69.623
+
+Type  : Slow 1100mV 0C Model Setup 'PWM_trans:trans|PWMRead:readP|current.outing'
+Slack : -4.607
+TNS   : -68.834
+
+Type  : Slow 1100mV 0C Model Hold 'CLOCK_50'
+Slack : 0.308
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'servoOut:outa|servos:sev|servoControl:sevP|current[0]'
+Slack : 0.858
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'servoOut:outa|servos:sev|servoControl:sevY|current[0]'
+Slack : 1.286
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'PWM_trans:trans|PWMRead:readP|current.outing'
+Slack : 2.605
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'PWM_trans:trans|PWMRead:readY|current.outing'
+Slack : 2.861
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -0.394
+TNS   : -50.655
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'servoOut:outa|servos:sev|servoControl:sevP|current[0]'
+Slack : 0.131
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'servoOut:outa|servos:sev|servoControl:sevY|current[0]'
+Slack : 0.241
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'PWM_trans:trans|PWMRead:readY|current.outing'
+Slack : 0.301
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'PWM_trans:trans|PWMRead:readP|current.outing'
+Slack : 0.342
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Setup 'servoOut:outa|servos:sev|servoControl:sevY|current[0]'
+Slack : -11.036
+TNS   : -190.831
+
+Type  : Fast 1100mV 85C Model Setup 'servoOut:outa|servos:sev|servoControl:sevP|current[0]'
+Slack : -10.501
+TNS   : -183.866
+
+Type  : Fast 1100mV 85C Model Setup 'CLOCK_50'
+Slack : -3.252
+TNS   : -189.243
+
+Type  : Fast 1100mV 85C Model Setup 'PWM_trans:trans|PWMRead:readY|current.outing'
+Slack : -2.328
+TNS   : -33.483
+
+Type  : Fast 1100mV 85C Model Setup 'PWM_trans:trans|PWMRead:readP|current.outing'
+Slack : -2.245
+TNS   : -33.114
+
+Type  : Fast 1100mV 85C Model Hold 'CLOCK_50'
+Slack : 0.200
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'servoOut:outa|servos:sev|servoControl:sevP|current[0]'
+Slack : 0.665
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'servoOut:outa|servos:sev|servoControl:sevY|current[0]'
+Slack : 0.998
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'PWM_trans:trans|PWMRead:readP|current.outing'
+Slack : 1.446
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'PWM_trans:trans|PWMRead:readY|current.outing'
+Slack : 1.543
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -0.088
+TNS   : -7.806
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'servoOut:outa|servos:sev|servoControl:sevY|current[0]'
+Slack : 0.238
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'servoOut:outa|servos:sev|servoControl:sevP|current[0]'
+Slack : 0.262
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'PWM_trans:trans|PWMRead:readY|current.outing'
+Slack : 0.322
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'PWM_trans:trans|PWMRead:readP|current.outing'
+Slack : 0.346
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Setup 'servoOut:outa|servos:sev|servoControl:sevY|current[0]'
+Slack : -10.364
+TNS   : -179.694
+
+Type  : Fast 1100mV 0C Model Setup 'servoOut:outa|servos:sev|servoControl:sevP|current[0]'
+Slack : -10.040
+TNS   : -176.123
+
+Type  : Fast 1100mV 0C Model Setup 'CLOCK_50'
+Slack : -2.774
+TNS   : -148.335
+
+Type  : Fast 1100mV 0C Model Setup 'PWM_trans:trans|PWMRead:readY|current.outing'
+Slack : -2.240
+TNS   : -32.437
+
+Type  : Fast 1100mV 0C Model Setup 'PWM_trans:trans|PWMRead:readP|current.outing'
+Slack : -2.163
+TNS   : -32.022
+
+Type  : Fast 1100mV 0C Model Hold 'CLOCK_50'
+Slack : 0.190
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'servoOut:outa|servos:sev|servoControl:sevP|current[0]'
+Slack : 0.564
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'servoOut:outa|servos:sev|servoControl:sevY|current[0]'
+Slack : 0.850
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'PWM_trans:trans|PWMRead:readP|current.outing'
+Slack : 1.412
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'PWM_trans:trans|PWMRead:readY|current.outing'
+Slack : 1.506
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -0.087
+TNS   : -7.713
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'servoOut:outa|servos:sev|servoControl:sevY|current[0]'
+Slack : 0.279
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'servoOut:outa|servos:sev|servoControl:sevP|current[0]'
+Slack : 0.284
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'PWM_trans:trans|PWMRead:readY|current.outing'
+Slack : 0.359
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'PWM_trans:trans|PWMRead:readP|current.outing'
+Slack : 0.373
+TNS   : 0.000
+
+------------------------------------------------------------

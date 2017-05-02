@@ -1,0 +1,101 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1100mV 85C Model Setup 'CLOCK_50'
+Slack : -5.208
+TNS   : -88.080
+
+Type  : Slow 1100mV 85C Model Setup 'oneSecond:clk|TFlipflop:TFF0|DFlipflop:DFF0|q'
+Slack : -1.494
+TNS   : -13.792
+
+Type  : Slow 1100mV 85C Model Hold 'CLOCK_50'
+Slack : 0.379
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'oneSecond:clk|TFlipflop:TFF0|DFlipflop:DFF0|q'
+Slack : 1.115
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -0.394
+TNS   : -18.903
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'oneSecond:clk|TFlipflop:TFF0|DFlipflop:DFF0|q'
+Slack : -0.394
+TNS   : -5.597
+
+Type  : Slow 1100mV 0C Model Setup 'CLOCK_50'
+Slack : -5.320
+TNS   : -87.175
+
+Type  : Slow 1100mV 0C Model Setup 'oneSecond:clk|TFlipflop:TFF0|DFlipflop:DFF0|q'
+Slack : -1.403
+TNS   : -13.139
+
+Type  : Slow 1100mV 0C Model Hold 'CLOCK_50'
+Slack : 0.377
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'oneSecond:clk|TFlipflop:TFF0|DFlipflop:DFF0|q'
+Slack : 1.040
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -0.394
+TNS   : -20.499
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'oneSecond:clk|TFlipflop:TFF0|DFlipflop:DFF0|q'
+Slack : -0.394
+TNS   : -5.612
+
+Type  : Fast 1100mV 85C Model Setup 'CLOCK_50'
+Slack : -3.108
+TNS   : -37.061
+
+Type  : Fast 1100mV 85C Model Setup 'oneSecond:clk|TFlipflop:TFF0|DFlipflop:DFF0|q'
+Slack : -0.823
+TNS   : -7.177
+
+Type  : Fast 1100mV 85C Model Hold 'CLOCK_50'
+Slack : 0.203
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'oneSecond:clk|TFlipflop:TFF0|DFlipflop:DFF0|q'
+Slack : 0.607
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -0.372
+TNS   : -3.430
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'oneSecond:clk|TFlipflop:TFF0|DFlipflop:DFF0|q'
+Slack : 0.161
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Setup 'CLOCK_50'
+Slack : -2.778
+TNS   : -31.710
+
+Type  : Fast 1100mV 0C Model Setup 'oneSecond:clk|TFlipflop:TFF0|DFlipflop:DFF0|q'
+Slack : -0.668
+TNS   : -5.859
+
+Type  : Fast 1100mV 0C Model Hold 'CLOCK_50'
+Slack : 0.193
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'oneSecond:clk|TFlipflop:TFF0|DFlipflop:DFF0|q'
+Slack : 0.517
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -0.373
+TNS   : -3.469
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'oneSecond:clk|TFlipflop:TFF0|DFlipflop:DFF0|q'
+Slack : 0.161
+TNS   : 0.000
+
+------------------------------------------------------------

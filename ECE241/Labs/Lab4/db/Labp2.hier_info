@@ -1,0 +1,400 @@
+|Labp2
+SW[0] => SW[0].IN1
+SW[1] => SW[1].IN1
+SW[2] => SW[2].IN1
+SW[3] => SW[3].IN1
+SW[4] => SW[4].IN1
+SW[5] => SW[5].IN1
+SW[6] => SW[6].IN1
+SW[7] => SW[7].IN1
+SW[8] => SW[8].IN1
+SW[9] => SW[9].IN2
+KEY[0] => KEY[0].IN1
+KEY[1] => KEY[1].IN1
+KEY[2] => KEY[2].IN1
+KEY[3] => KEY[3].IN1
+LEDR[0] <= aluNew:alu0.port2
+LEDR[1] <= aluNew:alu0.port2
+LEDR[2] <= aluNew:alu0.port2
+LEDR[3] <= aluNew:alu0.port2
+LEDR[4] <= aluNew:alu0.port2
+LEDR[5] <= aluNew:alu0.port2
+LEDR[6] <= aluNew:alu0.port2
+LEDR[7] <= aluNew:alu0.port2
+HEX0[0] <= aluNew:alu0.port3
+HEX0[1] <= aluNew:alu0.port3
+HEX0[2] <= aluNew:alu0.port3
+HEX0[3] <= aluNew:alu0.port3
+HEX0[4] <= aluNew:alu0.port3
+HEX0[5] <= aluNew:alu0.port3
+HEX0[6] <= aluNew:alu0.port3
+HEX1[0] <= aluNew:alu0.port4
+HEX1[1] <= aluNew:alu0.port4
+HEX1[2] <= aluNew:alu0.port4
+HEX1[3] <= aluNew:alu0.port4
+HEX1[4] <= aluNew:alu0.port4
+HEX1[5] <= aluNew:alu0.port4
+HEX1[6] <= aluNew:alu0.port4
+HEX2[0] <= aluNew:alu0.port5
+HEX2[1] <= aluNew:alu0.port5
+HEX2[2] <= aluNew:alu0.port5
+HEX2[3] <= aluNew:alu0.port5
+HEX2[4] <= aluNew:alu0.port5
+HEX2[5] <= aluNew:alu0.port5
+HEX2[6] <= aluNew:alu0.port5
+HEX3[0] <= aluNew:alu0.port6
+HEX3[1] <= aluNew:alu0.port6
+HEX3[2] <= aluNew:alu0.port6
+HEX3[3] <= aluNew:alu0.port6
+HEX3[4] <= aluNew:alu0.port6
+HEX3[5] <= aluNew:alu0.port6
+HEX3[6] <= aluNew:alu0.port6
+HEX4[0] <= aluNew:alu0.port7
+HEX4[1] <= aluNew:alu0.port7
+HEX4[2] <= aluNew:alu0.port7
+HEX4[3] <= aluNew:alu0.port7
+HEX4[4] <= aluNew:alu0.port7
+HEX4[5] <= aluNew:alu0.port7
+HEX4[6] <= aluNew:alu0.port7
+HEX5[0] <= aluNew:alu0.port8
+HEX5[1] <= aluNew:alu0.port8
+HEX5[2] <= aluNew:alu0.port8
+HEX5[3] <= aluNew:alu0.port8
+HEX5[4] <= aluNew:alu0.port8
+HEX5[5] <= aluNew:alu0.port8
+HEX5[6] <= aluNew:alu0.port8
+
+
+|Labp2|aluNew:alu0
+in[0] => A[0].IN2
+in[1] => A[1].IN2
+in[2] => A[2].IN2
+in[3] => A[3].IN2
+s[0] => Mux0.IN10
+s[0] => Mux1.IN10
+s[0] => Mux2.IN10
+s[0] => Mux3.IN9
+s[0] => Mux4.IN9
+s[0] => Mux5.IN9
+s[0] => Mux6.IN9
+s[0] => Mux7.IN9
+s[1] => Mux0.IN9
+s[1] => Mux1.IN9
+s[1] => Mux2.IN9
+s[1] => Mux3.IN8
+s[1] => Mux4.IN8
+s[1] => Mux5.IN8
+s[1] => Mux6.IN8
+s[1] => Mux7.IN8
+s[2] => Mux0.IN8
+s[2] => Mux1.IN8
+s[2] => Mux2.IN8
+s[2] => Mux3.IN7
+s[2] => Mux4.IN7
+s[2] => Mux5.IN7
+s[2] => Mux6.IN7
+s[2] => Mux7.IN7
+out[0] <= <GND>
+out[1] <= <GND>
+out[2] <= <GND>
+out[3] <= <GND>
+out[4] <= <GND>
+out[5] <= <GND>
+out[6] <= <GND>
+out[7] <= <GND>
+H0[0] <= bithex:m0.port4
+H0[1] <= bithex:m0.port5
+H0[2] <= bithex:m0.port6
+H0[3] <= bithex:m0.port7
+H0[4] <= bithex:m0.port8
+H0[5] <= bithex:m0.port9
+H0[6] <= bithex:m0.port10
+H1[0] <= <GND>
+H1[1] <= <GND>
+H1[2] <= <GND>
+H1[3] <= <GND>
+H1[4] <= <GND>
+H1[5] <= <GND>
+H1[6] <= <VCC>
+H2[0] <= bithex:m1.port4
+H2[1] <= bithex:m1.port5
+H2[2] <= bithex:m1.port6
+H2[3] <= bithex:m1.port7
+H2[4] <= bithex:m1.port8
+H2[5] <= bithex:m1.port9
+H2[6] <= bithex:m1.port10
+H3[0] <= <GND>
+H3[1] <= <GND>
+H3[2] <= <GND>
+H3[3] <= <GND>
+H3[4] <= <GND>
+H3[5] <= <GND>
+H3[6] <= <VCC>
+H4[0] <= bithex:m4.port4
+H4[1] <= bithex:m4.port5
+H4[2] <= bithex:m4.port6
+H4[3] <= bithex:m4.port7
+H4[4] <= bithex:m4.port8
+H4[5] <= bithex:m4.port9
+H4[6] <= bithex:m4.port10
+H5[0] <= bithex:m5.port4
+H5[1] <= bithex:m5.port5
+H5[2] <= bithex:m5.port6
+H5[3] <= bithex:m5.port7
+H5[4] <= bithex:m5.port8
+H5[5] <= bithex:m5.port9
+H5[6] <= bithex:m5.port10
+clock => Blatched[0].CLK
+clock => Blatched[1].CLK
+clock => Blatched[2].CLK
+clock => Blatched[3].CLK
+resetn => Blatched.OUTPUTSELECT
+resetn => Blatched.OUTPUTSELECT
+resetn => Blatched.OUTPUTSELECT
+resetn => Blatched.OUTPUTSELECT
+
+
+|Labp2|aluNew:alu0|ripcurry:u0
+b0 => b0.IN1
+b1 => b1.IN1
+b2 => b2.IN1
+b3 => b3.IN1
+a0 => a0.IN1
+a1 => a1.IN1
+a2 => a2.IN1
+a3 => a3.IN1
+s0 <= fulladd:m0.port3
+s1 <= fulladd:m1.port3
+s2 <= fulladd:m2.port3
+s3 <= fulladd:m3.port3
+cout <= fulladd:m3.port4
+
+
+|Labp2|aluNew:alu0|ripcurry:u0|fulladd:m0
+a => W.IN0
+a => out.IN0
+b => b.IN1
+ci => ci.IN1
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+co <= mux2to1:mux1.m
+
+
+|Labp2|aluNew:alu0|ripcurry:u0|fulladd:m0|mux2to1:mux1
+x => m.DATAA
+y => m.DATAB
+s => m.OUTPUTSELECT
+m <= m.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Labp2|aluNew:alu0|ripcurry:u0|fulladd:m1
+a => W.IN0
+a => out.IN0
+b => b.IN1
+ci => ci.IN1
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+co <= mux2to1:mux1.m
+
+
+|Labp2|aluNew:alu0|ripcurry:u0|fulladd:m1|mux2to1:mux1
+x => m.DATAA
+y => m.DATAB
+s => m.OUTPUTSELECT
+m <= m.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Labp2|aluNew:alu0|ripcurry:u0|fulladd:m2
+a => W.IN0
+a => out.IN0
+b => b.IN1
+ci => ci.IN1
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+co <= mux2to1:mux1.m
+
+
+|Labp2|aluNew:alu0|ripcurry:u0|fulladd:m2|mux2to1:mux1
+x => m.DATAA
+y => m.DATAB
+s => m.OUTPUTSELECT
+m <= m.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Labp2|aluNew:alu0|ripcurry:u0|fulladd:m3
+a => W.IN0
+a => out.IN0
+b => b.IN1
+ci => ci.IN1
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+co <= mux2to1:mux1.m
+
+
+|Labp2|aluNew:alu0|ripcurry:u0|fulladd:m3|mux2to1:mux1
+x => m.DATAA
+y => m.DATAB
+s => m.OUTPUTSELECT
+m <= m.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Labp2|aluNew:alu0|bithex:m0
+c3 => h0.IN0
+c3 => h0.IN0
+c3 => h0.IN0
+c3 => h0.IN0
+c2 => h0.IN1
+c2 => h0.IN1
+c2 => h0.IN1
+c2 => h0.IN1
+c1 => h0.IN1
+c1 => h1.IN1
+c1 => h1.IN1
+c1 => h2.IN1
+c1 => h0.IN1
+c1 => h0.IN1
+c1 => h0.IN1
+c1 => h3.IN1
+c0 => h0.IN1
+c0 => h0.IN1
+c0 => h0.IN1
+c0 => h1.IN1
+c0 => h1.IN1
+c0 => h3.IN1
+c0 => h3.IN1
+c0 => h4.IN1
+c0 => h0.IN1
+c0 => h1.IN1
+c0 => h1.IN1
+c0 => h1.IN1
+c0 => h2.IN1
+c0 => h3.IN1
+c0 => h6.IN1
+h0 <= h0.DB_MAX_OUTPUT_PORT_TYPE
+h1 <= h1.DB_MAX_OUTPUT_PORT_TYPE
+h2 <= h2.DB_MAX_OUTPUT_PORT_TYPE
+h3 <= h3.DB_MAX_OUTPUT_PORT_TYPE
+h4 <= h4.DB_MAX_OUTPUT_PORT_TYPE
+h5 <= h5.DB_MAX_OUTPUT_PORT_TYPE
+h6 <= h6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Labp2|aluNew:alu0|bithex:m1
+c3 => h0.IN0
+c3 => h0.IN0
+c3 => h0.IN0
+c3 => h0.IN0
+c2 => h0.IN1
+c2 => h0.IN1
+c2 => h0.IN1
+c2 => h0.IN1
+c1 => h0.IN1
+c1 => h1.IN1
+c1 => h1.IN1
+c1 => h2.IN1
+c1 => h0.IN1
+c1 => h0.IN1
+c1 => h0.IN1
+c1 => h3.IN1
+c0 => h0.IN1
+c0 => h0.IN1
+c0 => h0.IN1
+c0 => h1.IN1
+c0 => h1.IN1
+c0 => h3.IN1
+c0 => h3.IN1
+c0 => h4.IN1
+c0 => h0.IN1
+c0 => h1.IN1
+c0 => h1.IN1
+c0 => h1.IN1
+c0 => h2.IN1
+c0 => h3.IN1
+c0 => h6.IN1
+h0 <= h0.DB_MAX_OUTPUT_PORT_TYPE
+h1 <= h1.DB_MAX_OUTPUT_PORT_TYPE
+h2 <= h2.DB_MAX_OUTPUT_PORT_TYPE
+h3 <= h3.DB_MAX_OUTPUT_PORT_TYPE
+h4 <= h4.DB_MAX_OUTPUT_PORT_TYPE
+h5 <= h5.DB_MAX_OUTPUT_PORT_TYPE
+h6 <= h6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Labp2|aluNew:alu0|bithex:m4
+c3 => h0.IN0
+c3 => h0.IN0
+c3 => h0.IN0
+c3 => h0.IN0
+c2 => h0.IN1
+c2 => h0.IN1
+c2 => h0.IN1
+c2 => h0.IN1
+c1 => h0.IN1
+c1 => h1.IN1
+c1 => h1.IN1
+c1 => h2.IN1
+c1 => h0.IN1
+c1 => h0.IN1
+c1 => h0.IN1
+c1 => h3.IN1
+c0 => h0.IN1
+c0 => h0.IN1
+c0 => h0.IN1
+c0 => h1.IN1
+c0 => h1.IN1
+c0 => h3.IN1
+c0 => h3.IN1
+c0 => h4.IN1
+c0 => h0.IN1
+c0 => h1.IN1
+c0 => h1.IN1
+c0 => h1.IN1
+c0 => h2.IN1
+c0 => h3.IN1
+c0 => h6.IN1
+h0 <= h0.DB_MAX_OUTPUT_PORT_TYPE
+h1 <= h1.DB_MAX_OUTPUT_PORT_TYPE
+h2 <= h2.DB_MAX_OUTPUT_PORT_TYPE
+h3 <= h3.DB_MAX_OUTPUT_PORT_TYPE
+h4 <= h4.DB_MAX_OUTPUT_PORT_TYPE
+h5 <= h5.DB_MAX_OUTPUT_PORT_TYPE
+h6 <= h6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Labp2|aluNew:alu0|bithex:m5
+c3 => h0.IN0
+c3 => h0.IN0
+c3 => h0.IN0
+c3 => h0.IN0
+c2 => h0.IN1
+c2 => h0.IN1
+c2 => h0.IN1
+c2 => h0.IN1
+c1 => h0.IN1
+c1 => h1.IN1
+c1 => h1.IN1
+c1 => h2.IN1
+c1 => h0.IN1
+c1 => h0.IN1
+c1 => h0.IN1
+c1 => h3.IN1
+c0 => h0.IN1
+c0 => h0.IN1
+c0 => h0.IN1
+c0 => h1.IN1
+c0 => h1.IN1
+c0 => h3.IN1
+c0 => h3.IN1
+c0 => h4.IN1
+c0 => h0.IN1
+c0 => h1.IN1
+c0 => h1.IN1
+c0 => h1.IN1
+c0 => h2.IN1
+c0 => h3.IN1
+c0 => h6.IN1
+h0 <= h0.DB_MAX_OUTPUT_PORT_TYPE
+h1 <= h1.DB_MAX_OUTPUT_PORT_TYPE
+h2 <= h2.DB_MAX_OUTPUT_PORT_TYPE
+h3 <= h3.DB_MAX_OUTPUT_PORT_TYPE
+h4 <= h4.DB_MAX_OUTPUT_PORT_TYPE
+h5 <= h5.DB_MAX_OUTPUT_PORT_TYPE
+h6 <= h6.DB_MAX_OUTPUT_PORT_TYPE
+
+

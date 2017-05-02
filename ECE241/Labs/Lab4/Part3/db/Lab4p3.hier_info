@@ -1,0 +1,194 @@
+|Lab4p3
+SW[0] => SW[0].IN1
+SW[1] => SW[1].IN1
+SW[2] => SW[2].IN1
+SW[3] => SW[3].IN1
+SW[4] => SW[4].IN1
+SW[5] => SW[5].IN1
+SW[6] => SW[6].IN1
+SW[7] => SW[7].IN1
+SW[8] => ~NO_FANOUT~
+SW[9] => SW[9].IN1
+KEY[0] => KEY[0].IN1
+KEY[1] => KEY[1].IN1
+KEY[2] => KEY[2].IN1
+KEY[3] => KEY[3].IN1
+LEDR[0] <= LRrotatReg8b:LR8b.port6
+LEDR[1] <= LRrotatReg8b:LR8b.port6
+LEDR[2] <= LRrotatReg8b:LR8b.port6
+LEDR[3] <= LRrotatReg8b:LR8b.port6
+LEDR[4] <= LRrotatReg8b:LR8b.port6
+LEDR[5] <= LRrotatReg8b:LR8b.port6
+LEDR[6] <= LRrotatReg8b:LR8b.port6
+LEDR[7] <= LRrotatReg8b:LR8b.port6
+
+
+|Lab4p3|LRrotatReg8b:LR8b
+data[0] => data[0].IN1
+data[1] => data[1].IN1
+data[2] => data[2].IN1
+data[3] => data[3].IN1
+data[4] => data[4].IN1
+data[5] => data[5].IN1
+data[6] => data[6].IN1
+data[7] => data[7].IN1
+paralleLoadn => paralleLoadn.IN8
+rotatRight => rotatRight.IN8
+ASR => w0.OUTPUTSELECT
+ASR => w7.OUTPUTSELECT
+clock => clock.IN8
+reset => reset.IN8
+Q[0] <= Q[0].DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q[1].DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q[2].DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q[3].DB_MAX_OUTPUT_PORT_TYPE
+Q[4] <= Q[4].DB_MAX_OUTPUT_PORT_TYPE
+Q[5] <= Q[5].DB_MAX_OUTPUT_PORT_TYPE
+Q[6] <= Q[6].DB_MAX_OUTPUT_PORT_TYPE
+Q[7] <= Q[7].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab4p3|LRrotatReg8b:LR8b|LRrotatReg:LR0
+D => w0.DATAA
+left => shift.DATAB
+right => shift.DATAA
+loadL => shift.OUTPUTSELECT
+loadn => w0.OUTPUTSELECT
+clock => clock.IN1
+reset => reset.IN1
+Q <= flipfloph:FF0.port3
+
+
+|Lab4p3|LRrotatReg8b:LR8b|LRrotatReg:LR0|flipfloph:FF0
+D => Q.DATAA
+clock => Q~reg0.CLK
+reset => Q.OUTPUTSELECT
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab4p3|LRrotatReg8b:LR8b|LRrotatReg:LR1
+D => w0.DATAA
+left => shift.DATAB
+right => shift.DATAA
+loadL => shift.OUTPUTSELECT
+loadn => w0.OUTPUTSELECT
+clock => clock.IN1
+reset => reset.IN1
+Q <= flipfloph:FF0.port3
+
+
+|Lab4p3|LRrotatReg8b:LR8b|LRrotatReg:LR1|flipfloph:FF0
+D => Q.DATAA
+clock => Q~reg0.CLK
+reset => Q.OUTPUTSELECT
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab4p3|LRrotatReg8b:LR8b|LRrotatReg:LR2
+D => w0.DATAA
+left => shift.DATAB
+right => shift.DATAA
+loadL => shift.OUTPUTSELECT
+loadn => w0.OUTPUTSELECT
+clock => clock.IN1
+reset => reset.IN1
+Q <= flipfloph:FF0.port3
+
+
+|Lab4p3|LRrotatReg8b:LR8b|LRrotatReg:LR2|flipfloph:FF0
+D => Q.DATAA
+clock => Q~reg0.CLK
+reset => Q.OUTPUTSELECT
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab4p3|LRrotatReg8b:LR8b|LRrotatReg:LR3
+D => w0.DATAA
+left => shift.DATAB
+right => shift.DATAA
+loadL => shift.OUTPUTSELECT
+loadn => w0.OUTPUTSELECT
+clock => clock.IN1
+reset => reset.IN1
+Q <= flipfloph:FF0.port3
+
+
+|Lab4p3|LRrotatReg8b:LR8b|LRrotatReg:LR3|flipfloph:FF0
+D => Q.DATAA
+clock => Q~reg0.CLK
+reset => Q.OUTPUTSELECT
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab4p3|LRrotatReg8b:LR8b|LRrotatReg:LR4
+D => w0.DATAA
+left => shift.DATAB
+right => shift.DATAA
+loadL => shift.OUTPUTSELECT
+loadn => w0.OUTPUTSELECT
+clock => clock.IN1
+reset => reset.IN1
+Q <= flipfloph:FF0.port3
+
+
+|Lab4p3|LRrotatReg8b:LR8b|LRrotatReg:LR4|flipfloph:FF0
+D => Q.DATAA
+clock => Q~reg0.CLK
+reset => Q.OUTPUTSELECT
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab4p3|LRrotatReg8b:LR8b|LRrotatReg:LR5
+D => w0.DATAA
+left => shift.DATAB
+right => shift.DATAA
+loadL => shift.OUTPUTSELECT
+loadn => w0.OUTPUTSELECT
+clock => clock.IN1
+reset => reset.IN1
+Q <= flipfloph:FF0.port3
+
+
+|Lab4p3|LRrotatReg8b:LR8b|LRrotatReg:LR5|flipfloph:FF0
+D => Q.DATAA
+clock => Q~reg0.CLK
+reset => Q.OUTPUTSELECT
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab4p3|LRrotatReg8b:LR8b|LRrotatReg:LR6
+D => w0.DATAA
+left => shift.DATAB
+right => shift.DATAA
+loadL => shift.OUTPUTSELECT
+loadn => w0.OUTPUTSELECT
+clock => clock.IN1
+reset => reset.IN1
+Q <= flipfloph:FF0.port3
+
+
+|Lab4p3|LRrotatReg8b:LR8b|LRrotatReg:LR6|flipfloph:FF0
+D => Q.DATAA
+clock => Q~reg0.CLK
+reset => Q.OUTPUTSELECT
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab4p3|LRrotatReg8b:LR8b|LRrotatReg:LR7
+D => w0.DATAA
+left => shift.DATAB
+right => shift.DATAA
+loadL => shift.OUTPUTSELECT
+loadn => w0.OUTPUTSELECT
+clock => clock.IN1
+reset => reset.IN1
+Q <= flipfloph:FF0.port3
+
+
+|Lab4p3|LRrotatReg8b:LR8b|LRrotatReg:LR7|flipfloph:FF0
+D => Q.DATAA
+clock => Q~reg0.CLK
+reset => Q.OUTPUTSELECT
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,12 @@
+
+State Machine - |PWM_trans|PWMRead:readY|current
+Name current.reset current.outing current.count 
+current.reset 0 0 0 
+current.count 1 0 1 
+current.outing 1 1 0 
+
+State Machine - |PWM_trans|PWMRead:readP|current
+Name current.reset current.outing current.count 
+current.reset 0 0 0 
+current.count 1 0 1 
+current.outing 1 1 0 

@@ -1,0 +1,10 @@
+
+State Machine - |Lab6p3|dividerControl:control|current
+Name current.DONE current.SUB_WAIT current.ADD current.SUB current.SHIFT current.WAIT current.LOAD 
+current.LOAD 0 0 0 0 0 0 0 
+current.WAIT 0 0 0 0 0 1 1 
+current.SHIFT 0 0 0 0 1 0 1 
+current.SUB 0 0 0 1 0 0 1 
+current.ADD 0 0 1 0 0 0 1 
+current.SUB_WAIT 0 1 0 0 0 0 1 
+current.DONE 1 0 0 0 0 0 1 

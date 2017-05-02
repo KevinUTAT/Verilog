@@ -1,0 +1,106 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Dev/FPGA/Project/Lab4
+vbithex
+Z1 !s110 1476655884
+!i10b 1
+!s100 Ll<i<F8;505f0_>Uh[NTf1
+IfFb@JFQjd8>CR=BMf?C2`2
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z3 w1476655872
+Z4 8Labp2.v
+Z5 FLabp2.v
+L0 116
+Z6 OV;L;10.4d;61
+r1
+!s85 0
+31
+Z7 !s108 1476655884.000000
+Z8 !s107 Labp2.v|
+Z9 !s90 -reportprogress|300|Labp2.v|
+!i113 1
+vfulladd
+R1
+!i10b 1
+!s100 J<`1l:PVOB=`7PkZBG?W42
+InDoKISYozX1bfMYSXZadV3
+R2
+R0
+R3
+R4
+R5
+L0 146
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+vLabp2
+R1
+!i10b 1
+!s100 hI5ha0ojf`IhEM4nOIQ313
+Ih6]B4?67Hn::H;Gz@LLEm3
+R2
+R0
+R3
+R4
+R5
+L0 3
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+n@labp2
+vmux2to1
+R1
+!i10b 1
+!s100 U40XH`A8ecET@eaD2l^6i1
+I`efiDO5994A^aE?`<8Z>02
+R2
+R0
+R3
+R4
+R5
+L0 133
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+vripcurry
+R1
+!i10b 1
+!s100 bV_A9fCJDb59W643DKm@Z0
+IDbYz8^8XdH<fGa9;BNAVh0
+R2
+R0
+R3
+R4
+R5
+L0 165
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1

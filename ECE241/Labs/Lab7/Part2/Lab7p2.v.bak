@@ -1,0 +1,237 @@
+`timescale 1ns / 1ns 
+`include "vag_adaptor/vga_adapter.v"
+
+
+
+module Lab7p2(
+	input [9:0] SW,
+	input [3:0] KEY,
+	input CLOCK_50,
+	output VGA_CLK,   						//	VGA Clock
+	output VGA_CLK,   				//	VGA Clock
+	output VGA_HS,					//	VGA H_SYNC
+	output VGA_VS,					//	VGA V_SYNC
+	output VGA_BLANK_N,				//	VGA BLANK
+	output VGA_SYNC_N,				//	VGA SYNC
+	output [9:0] VGA_R,   				//	VGA Red[9:0]
+	output [9:0] VGA_G, 				//	VGA Green[9:0]
+	output [9:0] VGA_B);
+	
+	wire load_x, load_y, wren, black;
+	
+	controlPath control(
+					.load(KEY[3]),
+					.plot(KEY[1]),
+					.erase(KEY[2]),
+					.resetn(KEY[0]),
+					.clk(CLOCK_50),
+					.load_x(load_x),
+					.load_y(load_y),
+					.wren(wren),
+					.black(black));
+					
+	fill data(
+					.clk(CLOCK_50),						
+					.coord(SW[6:0]),
+					.colour(SW[9:7]),
+					.load_x(load_x),
+					.load_y(load_y),
+					.writeEn(wren),
+					.black(black),
+					.resetn(KEY[0]),
+					.VGA_CLK(VGA_CLK),   						//	VGA Clock
+					.VGA_HS(VGA_HS),							//	VGA H_SYNC
+					.VGA_VS(VGA_VS),							//	VGA V_SYNC
+					.VGA_BLANK_N(VGA_BLANK_N),						//	VGA BLANK
+					.VGA_SYNC_N(VGA_SYNC_N),						//	VGA SYNC
+					.VGA_R(VGA_R),   						//	VGA Red[9:0]
+					.VGA_G(VGA_G),	 						//	VGA Green[9:0]
+					.VGA_B(VGA_B));
+endmodule
+
+
+
+module controlPath(
+	input load,
+	input plot,
+	input erase,
+	input resetn,
+	input clk,
+	output reg load_x,
+	output reg load_y,
+	output reg wren,
+	output reg black);
+	
+	reg [2:0] current;
+	reg [2:0] next;
+	reg [3:0] counter;
+	
+	localparam  reset     = 3'b000,
+				loadx     = 3'b001,
+				waitx     = 3'b010,
+				loady     = 3'b011,
+				waity     = 3'b100,
+				draw      = 3'b101,
+				drawBlack = 3'b110;
+				
+	//0 - 15 counter
+	always@(posedge clk)
+	begin
+			if (resetn = 1'b1)
+				counter = 4'b0000;
+				current <= reset;
+			else 
+				counter = counter + 1'b1;
+				current <= next;
+	end
+	
+	//state table
+	always@(*)
+	begin
+			case(current)
+				reset: next = (resetn) ? reset : loadx;
+				
+				loadx: begin
+						counter = 4'b0000;
+						if (resetn == 1'b1) next = reset;
+						else if (load == 1'b0) next = loadx;
+						else if (load == 1'b1) next = waitx;
+					   end
+				
+				waitx: begin
+						counter = 4'b0000;
+						if (resetn == 1'b1) next = reset;
+						else if (load == 1'b1) next = waitx;
+						else if (load == 1'b0) next = loady;
+					   end
+					   
+				loady: begin
+						counter = 4'b0000;
+						if (resetn == 1'b1) next = reset;
+						else if (plot == 1'b0) next = loady;
+						else if (plot == 1'b1) next = esity;
+					   end
+					  
+			    waity: begin
+						counter = 4'b0000;
+						if (resetn == 1'b1) next = reset;
+						else if (plot == 1'b0) next = draw;
+						else if (plot == 1'b1) next = waity;
+					   end
+					   
+				draw: begin
+						if (resetn == 1'b1) next = reset;
+						else if (counter <= 15) next = draw;
+						else if (erase == 1) next = drawBlack;
+						else next = reset;
+					  end
+					  
+				drawBlack: next = reset;
+				
+				default: next = reset;
+			endcase
+	end
+	
+	always@(*)
+	begin
+			load_x = 1'b0;
+			load_y = 1'b0;
+			wren = 1'b0;
+			black = 1'b0;
+			
+			case (current)
+				waitx: load_X = 1'b1;
+				waity: load_y = 1'b1;
+				draw: wren = 1'b1;
+				drawBlack: begin
+							black = 1'b1;
+							wren = 1'b1;
+						   end
+			endcase
+	end
+endmodule
+
+
+
+module fill
+	(
+		clk,						//	On Board 50 MHz
+		// Your inputs and outputs here
+		coord,
+		colour,
+		load_x,
+		load_y,
+		writeEn,
+		black,
+		resetn,
+		// The ports below are for the VGA output.  Do not change.
+		VGA_CLK,   						//	VGA Clock
+		VGA_HS,							//	VGA H_SYNC
+		VGA_VS,							//	VGA V_SYNC
+		VGA_BLANK_N,						//	VGA BLANK
+		VGA_SYNC_N,						//	VGA SYNC
+		VGA_R,   						//	VGA Red[9:0]
+		VGA_G,	 						//	VGA Green[9:0]
+		VGA_B   						//	VGA Blue[9:0]
+	);
+
+	input			clk;				//	50 MHz
+	// Declare your inputs and outputs here
+	input [6:0] coord;
+	input [2:0] colour;
+	input load_x;
+	input load_y;
+	input writeEn;
+	input black;
+	input resetn;
+	// Do not change the following outputs
+	output			VGA_CLK;   				//	VGA Clock
+	output			VGA_HS;					//	VGA H_SYNC
+	output			VGA_VS;					//	VGA V_SYNC
+	output			VGA_BLANK_N;				//	VGA BLANK
+	output			VGA_SYNC_N;				//	VGA SYNC
+	output	[9:0]	VGA_R;   				//	VGA Red[9:0]
+	output	[9:0]	VGA_G;	 				//	VGA Green[9:0]
+	output	[9:0]	VGA_B;   				//	VGA Blue[9:0]
+	
+	reg [7:0] x;
+	reg [6:0] y;
+	
+	always@(*)
+	begin
+			if (load_x == 1)
+				x <= {1'b0, coord};
+			else if (load_y == 1)
+				y <= coord;
+	end
+	
+
+	// Create an Instance of a VGA controller - there can be only one!
+	// Define the number of colours as well as the initial background
+	// image file (.MIF) for the controller.
+	vga_adapter VGA(
+			.resetn(resetn),
+			.clock(clk),
+			.colour(colour),
+			.x(x),
+			.y(y),
+			.plot(writeEn),
+			/* Signals for the DAC to drive the monitor. */
+			.VGA_R(VGA_R),
+			.VGA_G(VGA_G),
+			.VGA_B(VGA_B),
+			.VGA_HS(VGA_HS),
+			.VGA_VS(VGA_VS),
+			.VGA_BLANK(VGA_BLANK_N),
+			.VGA_SYNC(VGA_SYNC_N),
+			.VGA_CLK(VGA_CLK));
+		defparam VGA.RESOLUTION = "160x120";
+		defparam VGA.MONOCHROME = "FALSE";
+		defparam VGA.BITS_PER_COLOUR_CHANNEL = 1;
+		defparam VGA.BACKGROUND_IMAGE = "black.mif";
+			
+	// Put your code here. Your code should produce signals x,y,colour and writeEn
+	// for the VGA controller, in addition to any other functionality your design may require.
+	
+	
+endmodule

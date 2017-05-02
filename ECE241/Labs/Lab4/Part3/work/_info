@@ -1,0 +1,89 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Dev/FPGA/Project/Lab4/Part3
+vflipfloph
+Z1 !s110 1476709476
+!i10b 1
+!s100 :05W]Y>3YKeO^dM<eH6>K3
+I1WBAIADJHJj3l1gREGXNc1
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z3 w1476653861
+Z4 8Lab4p3.v
+Z5 FLab4p3.v
+L0 15
+Z6 OV;L;10.4d;61
+r1
+!s85 0
+31
+Z7 !s108 1476709476.000000
+Z8 !s107 Lab4p3.v|
+Z9 !s90 -reportprogress|300|Lab4p3.v|
+!i113 1
+vLab4p3
+R1
+!i10b 1
+!s100 z[4QTM03SHaS8RNLKjGD^1
+I6zZajBjm6TYSacLbihk;_3
+R2
+R0
+R3
+R4
+R5
+L0 3
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+n@lab4p3
+vLRrotatReg
+R1
+!i10b 1
+!s100 0H<E8`;OKXSb]iX6:Ji`41
+I7aZ>KZX8ZJeb_Z>@_M;<D2
+R2
+R0
+R3
+R4
+R5
+L0 34
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+n@l@rrotat@reg
+vLRrotatReg8b
+R1
+!i10b 1
+!s100 @b<F77igF=8d=h=6bC8S30
+IkjJTH7n[IOTI?EC^AfRSL1
+R2
+R0
+R3
+R4
+R5
+L0 54
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+n@l@rrotat@reg8b

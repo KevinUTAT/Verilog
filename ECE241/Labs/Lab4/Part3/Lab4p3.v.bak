@@ -1,0 +1,97 @@
+`timescale 1ns / 1ns 
+
+module Lab3p3(SW, KEY, LEDR);
+	input [9:0] SW;
+	input [3:0] KEY;
+	output [7:0] LEDR;
+	
+	L/RrotatReg8b LR8b(SW[7:0],   KEY[1],  KEY[2],    KEY[0], SW[9], LEDR[7:0]);
+	//                 data   paralleLoadn rotatRight clock   reset      Q
+	
+endmodule
+
+
+//positive edge trigered active-high reset D-flipflop
+module flipfloph(D, clock, reset, Q);
+	input D;
+	input clock;
+	input reset;
+	output Q;
+	
+	reg Q;
+	
+	always@(posedge clock)
+	begin
+		if (reset == 1'b1)
+			Q <= 0;
+		else 
+			Q <= D;
+	end
+endmodule
+
+
+//1 bit left/right rotatibg register
+module L/RrotatReg(D, left, right, loadL, loadn, clock, reset, Q);
+	input D;
+	input left;
+	input right;
+	input loadL;
+	input loadn;
+	input clock;
+	input reset;
+	output Q;
+	
+	wire d;
+	reg d;
+	
+	always@(negedge clock)
+	begin
+		if (loadn == 1'b0)
+			d = D;
+		else
+			if (loadL == 1'b0)
+				d = right;
+			else
+				d = left;
+	end
+	
+	flipfloph FF0(d, clock, reset, Q);
+            //   D  clock  reset  Q
+endmodule
+
+
+module L/RrotatReg8b(data, paralleLoadn, rotatRight, clock, reset, Q);
+	input [7:0] data;
+	input papalleLoadn;
+	input rotatRight;
+	input clock;
+	input reset;
+	output [7:0] Q;
+	
+	wire w0;
+	wire w1;
+	wire w2;
+	wire w3;
+	wire w4;
+	wire w5;
+	wire w6;
+	wire w7;
+	
+	//                 D   left right  loadL        loadn     clock  reset   Q
+	L/RrotatReg LR0(data[0], w0, w6, rotatRight, paralleLodn, clock, reset, Q[0]);
+	
+	L/RrotatReg LR0(data[1], w1, w7, rotatRight, paralleLodn, clock, reset, Q[1]);
+	
+	L/RrotatReg LR0(data[2], w2, w0, rotatRight, paralleLodn, clock, reset, Q[2]);
+	
+	L/RrotatReg LR0(data[3], w3, w1, rotatRight, paralleLodn, clock, reset, Q[3]);
+	
+	L/RrotatReg LR0(data[4], w4, w2, rotatRight, paralleLodn, clock, reset, Q[4]);
+	
+	L/RrotatReg LR0(data[5], w5, w3, rotatRight, paralleLodn, clock, reset, Q[5]);
+	
+	L/RrotatReg LR0(data[6], w6, w4, rotatRight, paralleLodn, clock, reset, Q[6]);
+	
+	L/RrotatReg LR0(data[7], w7, w5, rotatRight, paralleLodn, clock, reset, Q[7]);
+endmodule
+

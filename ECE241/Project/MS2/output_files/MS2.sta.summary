@@ -1,0 +1,101 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1100mV 85C Model Setup 'PWMRead:read|current.outing'
+Slack : -4.894
+TNS   : -89.283
+
+Type  : Slow 1100mV 85C Model Setup 'CLOCK_50'
+Slack : -2.522
+TNS   : -49.782
+
+Type  : Slow 1100mV 85C Model Hold 'CLOCK_50'
+Slack : 0.377
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'PWMRead:read|current.outing'
+Slack : 2.887
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -0.394
+TNS   : -10.899
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'PWMRead:read|current.outing'
+Slack : 0.373
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Setup 'PWMRead:read|current.outing'
+Slack : -4.966
+TNS   : -90.778
+
+Type  : Slow 1100mV 0C Model Setup 'CLOCK_50'
+Slack : -2.210
+TNS   : -43.596
+
+Type  : Slow 1100mV 0C Model Hold 'CLOCK_50'
+Slack : 0.048
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'PWMRead:read|current.outing'
+Slack : 2.881
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -0.394
+TNS   : -11.745
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'PWMRead:read|current.outing'
+Slack : 0.330
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Setup 'PWMRead:read|current.outing'
+Slack : -2.488
+TNS   : -44.328
+
+Type  : Fast 1100mV 85C Model Setup 'CLOCK_50'
+Slack : -2.025
+TNS   : -35.559
+
+Type  : Fast 1100mV 85C Model Hold 'CLOCK_50'
+Slack : 0.201
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'PWMRead:read|current.outing'
+Slack : 1.606
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -0.088
+TNS   : -1.838
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'PWMRead:read|current.outing'
+Slack : 0.396
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Setup 'PWMRead:read|current.outing'
+Slack : -2.391
+TNS   : -42.783
+
+Type  : Fast 1100mV 0C Model Setup 'CLOCK_50'
+Slack : -1.511
+TNS   : -25.657
+
+Type  : Fast 1100mV 0C Model Hold 'CLOCK_50'
+Slack : 0.190
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'PWMRead:read|current.outing'
+Slack : 1.550
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -0.087
+TNS   : -1.796
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'PWMRead:read|current.outing'
+Slack : 0.410
+TNS   : 0.000
+
+------------------------------------------------------------

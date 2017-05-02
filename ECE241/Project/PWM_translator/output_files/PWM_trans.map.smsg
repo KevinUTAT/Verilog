@@ -1,0 +1,6 @@
+Info (10281): Verilog HDL Declaration information at PWM_trans.v(8): object "HEX0" differs only in case from object "hex0" in the same scope File: C:/Dev/FPGA/Project/PWM_translator/PWM_trans.v Line: 8
+Info (10281): Verilog HDL Declaration information at PWM_trans.v(9): object "HEX1" differs only in case from object "hex1" in the same scope File: C:/Dev/FPGA/Project/PWM_translator/PWM_trans.v Line: 9
+Info (10281): Verilog HDL Declaration information at PWM_trans.v(10): object "HEX2" differs only in case from object "hex2" in the same scope File: C:/Dev/FPGA/Project/PWM_translator/PWM_trans.v Line: 10
+Info (10281): Verilog HDL Declaration information at PWM_trans.v(11): object "HEX3" differs only in case from object "hex3" in the same scope File: C:/Dev/FPGA/Project/PWM_translator/PWM_trans.v Line: 11
+Info (10281): Verilog HDL Declaration information at PWM_trans.v(12): object "HEX4" differs only in case from object "hex4" in the same scope File: C:/Dev/FPGA/Project/PWM_translator/PWM_trans.v Line: 12
+Info (10281): Verilog HDL Declaration information at PWM_trans.v(14): object "HEX5" differs only in case from object "hex5" in the same scope File: C:/Dev/FPGA/Project/PWM_translator/PWM_trans.v Line: 14

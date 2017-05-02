@@ -1,0 +1,306 @@
+|Lab5p3
+SW[0] => SW[0].IN1
+SW[1] => SW[1].IN1
+SW[2] => SW[2].IN1
+SW[3] => ~NO_FANOUT~
+SW[4] => ~NO_FANOUT~
+KEY[0] => KEY[0].IN1
+KEY[1] => KEY[1].IN1
+CLOCK_50 => CLOCK_50.IN1
+LEDR[0] <= morsePlayer:player.port2
+LEDR[1] <= clock_1[0].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab5p3|morsePlayer:player
+code[0] => code[0].IN1
+code[1] => code[1].IN1
+code[2] => code[2].IN1
+code[3] => code[3].IN1
+code[4] => code[4].IN1
+code[5] => code[5].IN1
+code[6] => code[6].IN1
+code[7] => code[7].IN1
+code[8] => code[8].IN1
+code[9] => code[9].IN1
+code[10] => code[10].IN1
+code[11] => code[11].IN1
+clock_1 => clock_1.IN1
+signal <= LshiftReg12b:LSR0.port4
+load => load.IN1
+reset => reset.IN1
+
+
+|Lab5p3|morsePlayer:player|LshiftReg12b:LSR0
+data[0] => data[0].IN1
+data[1] => data[1].IN1
+data[2] => data[2].IN1
+data[3] => data[3].IN1
+data[4] => data[4].IN1
+data[5] => data[5].IN1
+data[6] => data[6].IN1
+data[7] => data[7].IN1
+data[8] => data[8].IN1
+data[9] => data[9].IN1
+data[10] => data[10].IN1
+data[11] => data[11].IN1
+paralleLoadn => paralleLoadn.IN12
+clock => clock.IN12
+reset => reset.IN12
+Q[0] <= Q[0].DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q[1].DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q[2].DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q[3].DB_MAX_OUTPUT_PORT_TYPE
+Q[4] <= Q[4].DB_MAX_OUTPUT_PORT_TYPE
+Q[5] <= Q[5].DB_MAX_OUTPUT_PORT_TYPE
+Q[6] <= Q[6].DB_MAX_OUTPUT_PORT_TYPE
+Q[7] <= Q[7].DB_MAX_OUTPUT_PORT_TYPE
+Q[8] <= Q[8].DB_MAX_OUTPUT_PORT_TYPE
+Q[9] <= Q[9].DB_MAX_OUTPUT_PORT_TYPE
+Q[10] <= Q[10].DB_MAX_OUTPUT_PORT_TYPE
+Q[11] <= Q[11].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab5p3|morsePlayer:player|LshiftReg12b:LSR0|LshiftReg:LR0
+D => w0.DATAA
+left => ~NO_FANOUT~
+right => w0.DATAB
+loadn => w0.OUTPUTSELECT
+clock => clock.IN1
+reset => reset.IN1
+Q <= flipfloph:FF0.port3
+
+
+|Lab5p3|morsePlayer:player|LshiftReg12b:LSR0|LshiftReg:LR0|flipfloph:FF0
+D => Q~reg0.DATAIN
+clock => Q~reg0.CLK
+reset => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab5p3|morsePlayer:player|LshiftReg12b:LSR0|LshiftReg:LR1
+D => w0.DATAA
+left => ~NO_FANOUT~
+right => w0.DATAB
+loadn => w0.OUTPUTSELECT
+clock => clock.IN1
+reset => reset.IN1
+Q <= flipfloph:FF0.port3
+
+
+|Lab5p3|morsePlayer:player|LshiftReg12b:LSR0|LshiftReg:LR1|flipfloph:FF0
+D => Q~reg0.DATAIN
+clock => Q~reg0.CLK
+reset => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab5p3|morsePlayer:player|LshiftReg12b:LSR0|LshiftReg:LR2
+D => w0.DATAA
+left => ~NO_FANOUT~
+right => w0.DATAB
+loadn => w0.OUTPUTSELECT
+clock => clock.IN1
+reset => reset.IN1
+Q <= flipfloph:FF0.port3
+
+
+|Lab5p3|morsePlayer:player|LshiftReg12b:LSR0|LshiftReg:LR2|flipfloph:FF0
+D => Q~reg0.DATAIN
+clock => Q~reg0.CLK
+reset => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab5p3|morsePlayer:player|LshiftReg12b:LSR0|LshiftReg:LR3
+D => w0.DATAA
+left => ~NO_FANOUT~
+right => w0.DATAB
+loadn => w0.OUTPUTSELECT
+clock => clock.IN1
+reset => reset.IN1
+Q <= flipfloph:FF0.port3
+
+
+|Lab5p3|morsePlayer:player|LshiftReg12b:LSR0|LshiftReg:LR3|flipfloph:FF0
+D => Q~reg0.DATAIN
+clock => Q~reg0.CLK
+reset => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab5p3|morsePlayer:player|LshiftReg12b:LSR0|LshiftReg:LR4
+D => w0.DATAA
+left => ~NO_FANOUT~
+right => w0.DATAB
+loadn => w0.OUTPUTSELECT
+clock => clock.IN1
+reset => reset.IN1
+Q <= flipfloph:FF0.port3
+
+
+|Lab5p3|morsePlayer:player|LshiftReg12b:LSR0|LshiftReg:LR4|flipfloph:FF0
+D => Q~reg0.DATAIN
+clock => Q~reg0.CLK
+reset => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab5p3|morsePlayer:player|LshiftReg12b:LSR0|LshiftReg:LR5
+D => w0.DATAA
+left => ~NO_FANOUT~
+right => w0.DATAB
+loadn => w0.OUTPUTSELECT
+clock => clock.IN1
+reset => reset.IN1
+Q <= flipfloph:FF0.port3
+
+
+|Lab5p3|morsePlayer:player|LshiftReg12b:LSR0|LshiftReg:LR5|flipfloph:FF0
+D => Q~reg0.DATAIN
+clock => Q~reg0.CLK
+reset => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab5p3|morsePlayer:player|LshiftReg12b:LSR0|LshiftReg:LR6
+D => w0.DATAA
+left => ~NO_FANOUT~
+right => w0.DATAB
+loadn => w0.OUTPUTSELECT
+clock => clock.IN1
+reset => reset.IN1
+Q <= flipfloph:FF0.port3
+
+
+|Lab5p3|morsePlayer:player|LshiftReg12b:LSR0|LshiftReg:LR6|flipfloph:FF0
+D => Q~reg0.DATAIN
+clock => Q~reg0.CLK
+reset => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab5p3|morsePlayer:player|LshiftReg12b:LSR0|LshiftReg:LR7
+D => w0.DATAA
+left => ~NO_FANOUT~
+right => w0.DATAB
+loadn => w0.OUTPUTSELECT
+clock => clock.IN1
+reset => reset.IN1
+Q <= flipfloph:FF0.port3
+
+
+|Lab5p3|morsePlayer:player|LshiftReg12b:LSR0|LshiftReg:LR7|flipfloph:FF0
+D => Q~reg0.DATAIN
+clock => Q~reg0.CLK
+reset => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab5p3|morsePlayer:player|LshiftReg12b:LSR0|LshiftReg:LR8
+D => w0.DATAA
+left => ~NO_FANOUT~
+right => w0.DATAB
+loadn => w0.OUTPUTSELECT
+clock => clock.IN1
+reset => reset.IN1
+Q <= flipfloph:FF0.port3
+
+
+|Lab5p3|morsePlayer:player|LshiftReg12b:LSR0|LshiftReg:LR8|flipfloph:FF0
+D => Q~reg0.DATAIN
+clock => Q~reg0.CLK
+reset => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab5p3|morsePlayer:player|LshiftReg12b:LSR0|LshiftReg:LR9
+D => w0.DATAA
+left => ~NO_FANOUT~
+right => w0.DATAB
+loadn => w0.OUTPUTSELECT
+clock => clock.IN1
+reset => reset.IN1
+Q <= flipfloph:FF0.port3
+
+
+|Lab5p3|morsePlayer:player|LshiftReg12b:LSR0|LshiftReg:LR9|flipfloph:FF0
+D => Q~reg0.DATAIN
+clock => Q~reg0.CLK
+reset => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab5p3|morsePlayer:player|LshiftReg12b:LSR0|LshiftReg:LR10
+D => w0.DATAA
+left => ~NO_FANOUT~
+right => w0.DATAB
+loadn => w0.OUTPUTSELECT
+clock => clock.IN1
+reset => reset.IN1
+Q <= flipfloph:FF0.port3
+
+
+|Lab5p3|morsePlayer:player|LshiftReg12b:LSR0|LshiftReg:LR10|flipfloph:FF0
+D => Q~reg0.DATAIN
+clock => Q~reg0.CLK
+reset => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab5p3|morsePlayer:player|LshiftReg12b:LSR0|LshiftReg:LR11
+D => w0.DATAA
+left => ~NO_FANOUT~
+right => w0.DATAB
+loadn => w0.OUTPUTSELECT
+clock => clock.IN1
+reset => reset.IN1
+Q <= flipfloph:FF0.port3
+
+
+|Lab5p3|morsePlayer:player|LshiftReg12b:LSR0|LshiftReg:LR11|flipfloph:FF0
+D => Q~reg0.DATAIN
+clock => Q~reg0.CLK
+reset => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab5p3|morseDecode:decode
+letter[0] => Decoder0.IN2
+letter[0] => Decoder1.IN1
+letter[1] => Decoder0.IN1
+letter[1] => Decoder1.IN0
+letter[2] => Decoder0.IN0
+code[0] <= <GND>
+code[1] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+code[2] <= <GND>
+code[3] <= code.DB_MAX_OUTPUT_PORT_TYPE
+code[4] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+code[5] <= Decoder1.DB_MAX_OUTPUT_PORT_TYPE
+code[6] <= code.DB_MAX_OUTPUT_PORT_TYPE
+code[7] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+code[8] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+code[9] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+code[10] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+code[11] <= <VCC>
+
+
+|Lab5p3|oneSecond:clk
+clock_50M => clock_50M.IN1
+reset => always0.IN0
+clock_1 <= TFlipflop:TFF0.port1
+
+
+|Lab5p3|oneSecond:clk|TFlipflop:TFF0
+T => D.OUTPUTSELECT
+Q <= DFlipflop:DFF0.port3
+clock => clock.IN1
+clear => clear.IN1
+
+
+|Lab5p3|oneSecond:clk|TFlipflop:TFF0|DFlipflop:DFF0
+D => q.DATAIN
+clock => q.CLK
+reset => q.ACLR
+Q <= q.DB_MAX_OUTPUT_PORT_TYPE
+
+

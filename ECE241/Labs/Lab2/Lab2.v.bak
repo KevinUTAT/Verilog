@@ -1,0 +1,5 @@
+`timescale 1ns/1ns
+
+module Lab2(input SW[9:0], output LEDR[9:0]);
+
+endmodule

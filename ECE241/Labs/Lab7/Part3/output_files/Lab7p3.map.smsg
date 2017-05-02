@@ -1,0 +1,2 @@
+Warning (10268): Verilog HDL information at Lab7p3.v(108): always construct contains both blocking and non-blocking assignments File: C:/Dev/FPGA/Project/Lab7/Part3/Lab7p3.v Line: 108
+Info (10281): Verilog HDL Declaration information at Lab7p3.v(59): object "black" differs only in case from object "Black" in the same scope File: C:/Dev/FPGA/Project/Lab7/Part3/Lab7p3.v Line: 59

@@ -1,0 +1,49 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Dev/FPGA/Project/Lab6/Part1
+vLab6p1
+Z1 !s110 1477698529
+!i10b 1
+!s100 c;P[RQ8=o:Mo<J7IPTDNa3
+IMA?;ATSSYEzl<RcVJY<QS3
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1477691059
+8Lab6p1.v
+FLab6p1.v
+L0 5
+Z3 OV;L;10.4d;61
+r1
+!s85 0
+31
+Z4 !s108 1477698529.000000
+Z5 !s107 sequence_detector.v|Lab6p1.v|
+Z6 !s90 -reportprogress|300|Lab6p1.v|
+!i113 1
+n@lab6p1
+vsequence_detector
+R1
+!i10b 1
+!s100 T`e<L8P4jRk;dbhJz4mlf0
+IR5h<lk?ER>:ZFdFW9U`X80
+R2
+R0
+w1477692106
+8sequence_detector.v
+Fsequence_detector.v
+L0 9
+R3
+r1
+!s85 0
+31
+R4
+R5
+R6
+!i113 1

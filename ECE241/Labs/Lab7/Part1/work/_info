@@ -1,0 +1,108 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Dev/FPGA/Project/Lab7/Part1
+vbithex
+Z1 !s110 1478141071
+!i10b 1
+!s100 ;zJ]dJ>GO?MJal3GWV3D51
+I5o1A`E:eY>gJHi5l=o^z=3
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z3 w1477625270
+Z4 8EZ241.v
+Z5 FEZ241.v
+L0 13
+Z6 OV;L;10.4d;61
+r1
+!s85 0
+31
+Z7 !s108 1478141071.000000
+Z8 !s107 EZ241.v|ram32x4.v|Lab7p1.v|
+Z9 !s90 -reportprogress|300|Lab7p1.v|
+!i113 1
+vDFlipflop_al
+R1
+!i10b 1
+!s100 1I@:iYJamHaZU5[]b1>>c0
+I6>UN4>Y;MXaC9i:b]^2^h2
+R2
+R0
+R3
+R4
+R5
+L0 60
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+n@d@flipflop_al
+vLab7p1
+R1
+!i10b 1
+!s100 9EeO_SQG]^9ALnMfo6LE]1
+ISzQ[AMHIF[VfGh0i3fK6C1
+R2
+R0
+w1478140630
+8Lab7p1.v
+FLab7p1.v
+L0 7
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+n@lab7p1
+vram32x4
+R1
+!i10b 1
+!s100 ;^BLTO6lghzZ?IMklD^:U3
+IJTXfD@>e8E`HiI``iYE0`3
+R2
+R0
+w1478138451
+8ram32x4.v
+Fram32x4.v
+L0 40
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+vTFlipflop_al
+R1
+!i10b 1
+!s100 8jke[N74>k39foWjmk;bd1
+I5bm?^?C910EPOZ1=YNV4N1
+R2
+R0
+R3
+R4
+R5
+L0 42
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+n@t@flipflop_al

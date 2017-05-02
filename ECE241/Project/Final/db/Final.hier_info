@@ -1,0 +1,370 @@
+|Final
+CLOCK_50 => CLOCK_50.IN2
+KEY[0] => KEY[0].IN2
+KEY[1] => ~NO_FANOUT~
+KEY[2] => ~NO_FANOUT~
+KEY[3] => ~NO_FANOUT~
+SW[0] => din.DATAA
+SW[1] => din.DATAA
+SW[2] => din.DATAA
+SW[3] => din.DATAA
+SW[4] => din.DATAA
+SW[5] => din.DATAA
+SW[6] => din.DATAA
+SW[7] => din.DATAA
+SW[8] => ~NO_FANOUT~
+SW[9] => din.OUTPUTSELECT
+SW[9] => din.OUTPUTSELECT
+SW[9] => din.OUTPUTSELECT
+SW[9] => din.OUTPUTSELECT
+SW[9] => din.OUTPUTSELECT
+SW[9] => din.OUTPUTSELECT
+SW[9] => din.OUTPUTSELECT
+SW[9] => din.OUTPUTSELECT
+SW[9] => din.OUTPUTSELECT
+SW[9] => din.OUTPUTSELECT
+SW[9] => din.OUTPUTSELECT
+SW[9] => din.OUTPUTSELECT
+SW[9] => din.OUTPUTSELECT
+SW[9] => din.OUTPUTSELECT
+SW[9] => din.OUTPUTSELECT
+SW[9] => din.OUTPUTSELECT
+GPIO_0[34] <= servoOut:outa.sevout
+GPIO_0[35] <= servoOut:outa.sevout
+GPIO_1[30] => GPIO_1[30].IN1
+GPIO_1[31] => GPIO_1[31].IN1
+HEX0[0] <= hex_decoder:hex0.port1
+HEX0[1] <= hex_decoder:hex0.port1
+HEX0[2] <= hex_decoder:hex0.port1
+HEX0[3] <= hex_decoder:hex0.port1
+HEX0[4] <= hex_decoder:hex0.port1
+HEX0[5] <= hex_decoder:hex0.port1
+HEX0[6] <= hex_decoder:hex0.port1
+HEX1[0] <= hex_decoder:hex1.port1
+HEX1[1] <= hex_decoder:hex1.port1
+HEX1[2] <= hex_decoder:hex1.port1
+HEX1[3] <= hex_decoder:hex1.port1
+HEX1[4] <= hex_decoder:hex1.port1
+HEX1[5] <= hex_decoder:hex1.port1
+HEX1[6] <= hex_decoder:hex1.port1
+HEX4[0] <= hex_decoder:hex4.port1
+HEX4[1] <= hex_decoder:hex4.port1
+HEX4[2] <= hex_decoder:hex4.port1
+HEX4[3] <= hex_decoder:hex4.port1
+HEX4[4] <= hex_decoder:hex4.port1
+HEX4[5] <= hex_decoder:hex4.port1
+HEX4[6] <= hex_decoder:hex4.port1
+HEX5[0] <= hex_decoder:hex5.port1
+HEX5[1] <= hex_decoder:hex5.port1
+HEX5[2] <= hex_decoder:hex5.port1
+HEX5[3] <= hex_decoder:hex5.port1
+HEX5[4] <= hex_decoder:hex5.port1
+HEX5[5] <= hex_decoder:hex5.port1
+HEX5[6] <= hex_decoder:hex5.port1
+
+
+|Final|PWM_trans:trans
+clk => clk.IN2
+resetn => resetn.IN2
+PWM[0] => PWM[0].IN1
+PWM[1] => PWM[1].IN1
+outb[0] <= PWMRead:readP.width
+outb[1] <= PWMRead:readP.width
+outb[2] <= PWMRead:readP.width
+outb[3] <= PWMRead:readP.width
+outb[4] <= PWMRead:readP.width
+outb[5] <= PWMRead:readP.width
+outb[6] <= PWMRead:readP.width
+outb[7] <= PWMRead:readP.width
+outb[8] <= PWMRead:readY.width
+outb[9] <= PWMRead:readY.width
+outb[10] <= PWMRead:readY.width
+outb[11] <= PWMRead:readY.width
+outb[12] <= PWMRead:readY.width
+outb[13] <= PWMRead:readY.width
+outb[14] <= PWMRead:readY.width
+outb[15] <= PWMRead:readY.width
+
+
+|Final|PWM_trans:trans|PWMRead:readP
+resetn => current.OUTPUTSELECT
+resetn => current.OUTPUTSELECT
+resetn => current.OUTPUTSELECT
+clk => counter[0].CLK
+clk => counter[1].CLK
+clk => counter[2].CLK
+clk => counter[3].CLK
+clk => counter[4].CLK
+clk => counter[5].CLK
+clk => counter[6].CLK
+clk => counter[7].CLK
+clk => counter[8].CLK
+clk => counter[9].CLK
+clk => counter[10].CLK
+clk => counter[11].CLK
+clk => counter[12].CLK
+clk => counter[13].CLK
+clk => counter[14].CLK
+clk => counter[15].CLK
+clk => counter[16].CLK
+clk => counter[17].CLK
+clk => counter[18].CLK
+clk => current~1.DATAIN
+pwm => Selector1.IN1
+pwm => next.outing.DATAB
+pwm => Selector0.IN2
+width[0] <= Div0.DB_MAX_OUTPUT_PORT_TYPE
+width[1] <= Div0.DB_MAX_OUTPUT_PORT_TYPE
+width[2] <= Div0.DB_MAX_OUTPUT_PORT_TYPE
+width[3] <= Div0.DB_MAX_OUTPUT_PORT_TYPE
+width[4] <= Div0.DB_MAX_OUTPUT_PORT_TYPE
+width[5] <= Div0.DB_MAX_OUTPUT_PORT_TYPE
+width[6] <= Div0.DB_MAX_OUTPUT_PORT_TYPE
+width[7] <= Div0.DB_MAX_OUTPUT_PORT_TYPE
+width[8] <= Div0.DB_MAX_OUTPUT_PORT_TYPE
+width[9] <= Div0.DB_MAX_OUTPUT_PORT_TYPE
+width[10] <= Div0.DB_MAX_OUTPUT_PORT_TYPE
+width[11] <= Div0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Final|PWM_trans:trans|PWMRead:readY
+resetn => current.OUTPUTSELECT
+resetn => current.OUTPUTSELECT
+resetn => current.OUTPUTSELECT
+clk => counter[0].CLK
+clk => counter[1].CLK
+clk => counter[2].CLK
+clk => counter[3].CLK
+clk => counter[4].CLK
+clk => counter[5].CLK
+clk => counter[6].CLK
+clk => counter[7].CLK
+clk => counter[8].CLK
+clk => counter[9].CLK
+clk => counter[10].CLK
+clk => counter[11].CLK
+clk => counter[12].CLK
+clk => counter[13].CLK
+clk => counter[14].CLK
+clk => counter[15].CLK
+clk => counter[16].CLK
+clk => counter[17].CLK
+clk => counter[18].CLK
+clk => current~1.DATAIN
+pwm => Selector1.IN1
+pwm => next.outing.DATAB
+pwm => Selector0.IN2
+width[0] <= Div0.DB_MAX_OUTPUT_PORT_TYPE
+width[1] <= Div0.DB_MAX_OUTPUT_PORT_TYPE
+width[2] <= Div0.DB_MAX_OUTPUT_PORT_TYPE
+width[3] <= Div0.DB_MAX_OUTPUT_PORT_TYPE
+width[4] <= Div0.DB_MAX_OUTPUT_PORT_TYPE
+width[5] <= Div0.DB_MAX_OUTPUT_PORT_TYPE
+width[6] <= Div0.DB_MAX_OUTPUT_PORT_TYPE
+width[7] <= Div0.DB_MAX_OUTPUT_PORT_TYPE
+width[8] <= Div0.DB_MAX_OUTPUT_PORT_TYPE
+width[9] <= Div0.DB_MAX_OUTPUT_PORT_TYPE
+width[10] <= Div0.DB_MAX_OUTPUT_PORT_TYPE
+width[11] <= Div0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Final|servoOut:outa
+clk => clk.IN1
+load => load.IN1
+din[0] => din[0].IN1
+din[1] => din[1].IN1
+din[2] => din[2].IN1
+din[3] => din[3].IN1
+din[4] => din[4].IN1
+din[5] => din[5].IN1
+din[6] => din[6].IN1
+din[7] => din[7].IN1
+din[8] => din[8].IN1
+din[9] => din[9].IN1
+din[10] => din[10].IN1
+din[11] => din[11].IN1
+din[12] => din[12].IN1
+din[13] => din[13].IN1
+din[14] => din[14].IN1
+din[15] => din[15].IN1
+resetn => resetn.IN1
+sevout[0] <= servos:sev.servoY
+sevout[1] <= servos:sev.servoP
+
+
+|Final|servoOut:outa|servos:sev
+clk => clk.IN2
+data_in[0] => dinP[0].IN1
+data_in[1] => dinP[1].IN1
+data_in[2] => dinP[2].IN1
+data_in[3] => dinP[3].IN1
+data_in[4] => dinP[4].IN1
+data_in[5] => dinP[5].IN1
+data_in[6] => dinP[6].IN1
+data_in[7] => dinP[7].IN1
+data_in[8] => dinY[0].IN1
+data_in[9] => dinY[1].IN1
+data_in[10] => dinY[2].IN1
+data_in[11] => dinY[3].IN1
+data_in[12] => dinY[4].IN1
+data_in[13] => dinY[5].IN1
+data_in[14] => dinY[6].IN1
+data_in[15] => dinY[7].IN1
+resetn => resetn.IN2
+load => load.IN2
+servoP <= servoControl:sevP.sig
+servoY <= servoControl:sevY.sig
+
+
+|Final|servoOut:outa|servos:sev|servoControl:sevP
+clk => count[0].CLK
+clk => count[1].CLK
+clk => count[2].CLK
+clk => count[3].CLK
+clk => count[4].CLK
+clk => count[5].CLK
+clk => count[6].CLK
+clk => count[7].CLK
+clk => count[8].CLK
+clk => count[9].CLK
+clk => count[10].CLK
+clk => count[11].CLK
+clk => count[12].CLK
+clk => count[13].CLK
+clk => count[14].CLK
+clk => count[15].CLK
+clk => count[16].CLK
+clk => count[17].CLK
+clk => count[18].CLK
+clk => count[19].CLK
+clk => count[20].CLK
+clk => current[0].CLK
+clk => current[1].CLK
+clk => current[2].CLK
+resetn => Mux2.IN7
+resetn => next.OUTPUTSELECT
+resetn => Mux2.IN4
+resetn => next.OUTPUTSELECT
+resetn => next.OUTPUTSELECT
+resetn => next.OUTPUTSELECT
+resetn => clear.OUTPUTSELECT
+resetn => current.OUTPUTSELECT
+resetn => current.OUTPUTSELECT
+resetn => current.OUTPUTSELECT
+resetn => always1.IN1
+loadP => next.DATAB
+posi[0] => Mult0.IN16
+posi[1] => Mult0.IN15
+posi[2] => Mult0.IN14
+posi[3] => Mult0.IN13
+posi[4] => Mult0.IN12
+posi[5] => Mult0.IN11
+posi[6] => Mult0.IN10
+posi[7] => Mult0.IN9
+sig <= sig$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Final|servoOut:outa|servos:sev|servoControl:sevY
+clk => count[0].CLK
+clk => count[1].CLK
+clk => count[2].CLK
+clk => count[3].CLK
+clk => count[4].CLK
+clk => count[5].CLK
+clk => count[6].CLK
+clk => count[7].CLK
+clk => count[8].CLK
+clk => count[9].CLK
+clk => count[10].CLK
+clk => count[11].CLK
+clk => count[12].CLK
+clk => count[13].CLK
+clk => count[14].CLK
+clk => count[15].CLK
+clk => count[16].CLK
+clk => count[17].CLK
+clk => count[18].CLK
+clk => count[19].CLK
+clk => count[20].CLK
+clk => current[0].CLK
+clk => current[1].CLK
+clk => current[2].CLK
+resetn => Mux2.IN7
+resetn => next.OUTPUTSELECT
+resetn => Mux2.IN4
+resetn => next.OUTPUTSELECT
+resetn => next.OUTPUTSELECT
+resetn => next.OUTPUTSELECT
+resetn => clear.OUTPUTSELECT
+resetn => current.OUTPUTSELECT
+resetn => current.OUTPUTSELECT
+resetn => current.OUTPUTSELECT
+resetn => always1.IN1
+loadP => next.DATAB
+posi[0] => Mult0.IN16
+posi[1] => Mult0.IN15
+posi[2] => Mult0.IN14
+posi[3] => Mult0.IN13
+posi[4] => Mult0.IN12
+posi[5] => Mult0.IN11
+posi[6] => Mult0.IN10
+posi[7] => Mult0.IN9
+sig <= sig$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Final|hex_decoder:hex0
+hex_digit[0] => Decoder0.IN3
+hex_digit[1] => Decoder0.IN2
+hex_digit[2] => Decoder0.IN1
+hex_digit[3] => Decoder0.IN0
+segments[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+segments[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+segments[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+segments[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+segments[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+segments[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+segments[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Final|hex_decoder:hex1
+hex_digit[0] => Decoder0.IN3
+hex_digit[1] => Decoder0.IN2
+hex_digit[2] => Decoder0.IN1
+hex_digit[3] => Decoder0.IN0
+segments[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+segments[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+segments[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+segments[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+segments[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+segments[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+segments[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Final|hex_decoder:hex4
+hex_digit[0] => Decoder0.IN3
+hex_digit[1] => Decoder0.IN2
+hex_digit[2] => Decoder0.IN1
+hex_digit[3] => Decoder0.IN0
+segments[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+segments[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+segments[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+segments[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+segments[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+segments[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+segments[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Final|hex_decoder:hex5
+hex_digit[0] => Decoder0.IN3
+hex_digit[1] => Decoder0.IN2
+hex_digit[2] => Decoder0.IN1
+hex_digit[3] => Decoder0.IN0
+segments[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+segments[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+segments[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+segments[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+segments[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+segments[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+segments[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+

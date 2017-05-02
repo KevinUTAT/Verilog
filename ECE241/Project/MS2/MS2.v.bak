@@ -1,0 +1,86 @@
+`timescale 1ns / 1ns 
+
+
+module MS2(
+	input CLOCK_50,
+	input [35:0] GPIO_0,
+	output [6:0] HEX0,
+	output [6:0] HEX1,
+	output [6:0] HEX2);
+	
+	wire [9:0] width;
+	
+	PWMRead read(
+				.clk(CLOCK_50),
+				.pwm(GPIO_0[32],
+				.width(width));
+				
+	hex_decoder hex0(width[3:0], HEX0);
+	hex_decoder hex1(width[7:4], HEX1);
+	hex_decoder hex2({2'b00, width[9:8]}, HEX2);	
+endmodule
+
+
+
+module PWMRead(
+	input clk
+	input pwm,
+	output [9:0] width); //width in unit of us witch is 0.001 ms
+	
+	wire start;
+	reg [18:0] count;
+	reg [18:0] clkwidth;
+	
+	always@(posedge clk)
+	begin
+			if(start == 1'b0) count = 18'd0;
+			else count = count + 1'b1;
+	endcase
+	
+	always@(posedge pwm)
+	begin
+			start = 1'b1;
+	end
+	
+	always@(posedge clk)
+	begin
+			if (pwm == 1'b0) start = 1'b0;
+	end
+	
+	always@(negedge pwm)
+	begin
+			clkwidth <= count;
+	end
+	
+	assign width = clkwidth / 200000;
+	
+endmodule
+	
+	
+	
+module hex_decoder(hex_digit, segments);
+    input [3:0] hex_digit;
+    output reg [6:0] segments;
+   
+    always @(*)
+        case (hex_digit)
+            4'h0: segments = 7'b100_0000;
+            4'h1: segments = 7'b111_1001;
+            4'h2: segments = 7'b010_0100;
+            4'h3: segments = 7'b011_0000;
+            4'h4: segments = 7'b001_1001;
+            4'h5: segments = 7'b001_0010;
+            4'h6: segments = 7'b000_0010;
+            4'h7: segments = 7'b111_1000;
+            4'h8: segments = 7'b000_0000;
+            4'h9: segments = 7'b001_1000;
+            4'hA: segments = 7'b000_1000;
+            4'hB: segments = 7'b000_0011;
+            4'hC: segments = 7'b100_0110;
+            4'hD: segments = 7'b010_0001;
+            4'hE: segments = 7'b000_0110;
+            4'hF: segments = 7'b000_1110;   
+            default: segments = 7'h7f;
+        endcase
+endmodule
+	

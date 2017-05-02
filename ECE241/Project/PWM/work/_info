@@ -1,0 +1,69 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Dev/FPGA/Project/PWM
+vcontrolPath
+Z1 !s110 1479074958
+!i10b 1
+!s100 CG]LKLVQ4BdNH:2I]J1`b2
+Io<za9YT0X;kUcckkj6Ua`0
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z3 w1479074046
+Z4 8PWM.v
+Z5 FPWM.v
+L0 30
+Z6 OV;L;10.4d;61
+r1
+!s85 0
+31
+Z7 !s108 1479074958.000000
+Z8 !s107 PWM.v|
+Z9 !s90 -reportprogress|300|PWM.v|
+!i113 1
+ncontrol@path
+vhex_decoder
+R1
+!i10b 1
+!s100 fKE7mN1mAQW9F5J]gnLJ]1
+I:4E7UBdk@<zJmc9idPCQ[0
+R2
+R0
+R3
+R4
+R5
+L0 143
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+vPWM
+R1
+!i10b 1
+!s100 Y]DG:BYJO>ZhZ>7=lLGhX1
+INh]UkUOHLiml_Nka:Xi^n3
+R2
+R0
+R3
+R4
+R5
+L0 3
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+n@p@w@m

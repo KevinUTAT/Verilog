@@ -1,0 +1,5 @@
+Info (10281): Verilog HDL Declaration information at EZ241.v(64): object "Q" differs only in case from object "q" in the same scope File: C:/Dev/FPGA/Project/Lab7/Part1/EZ241.v Line: 64
+Info (10281): Verilog HDL Declaration information at Lab7p1.v(10): object "HEX0" differs only in case from object "hex0" in the same scope File: C:/Dev/FPGA/Project/Lab7/Part1/Lab7p1.v Line: 10
+Info (10281): Verilog HDL Declaration information at Lab7p1.v(11): object "HEX2" differs only in case from object "hex2" in the same scope File: C:/Dev/FPGA/Project/Lab7/Part1/Lab7p1.v Line: 11
+Info (10281): Verilog HDL Declaration information at Lab7p1.v(12): object "HEX4" differs only in case from object "hex4" in the same scope File: C:/Dev/FPGA/Project/Lab7/Part1/Lab7p1.v Line: 12
+Info (10281): Verilog HDL Declaration information at Lab7p1.v(13): object "HEX5" differs only in case from object "hex5" in the same scope File: C:/Dev/FPGA/Project/Lab7/Part1/Lab7p1.v Line: 13
